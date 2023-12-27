@@ -1,90 +1,53 @@
-# Next + Netlify Starter
+# Next JS + Vapor X Crawlspace 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
+- **About:** 
+  - Vapor-X Crawlspaces specializes in waterproofing crawlspaces, offering high-quality services at affordable prices. Sean Williams is the primary waterproofing expert with years of experience.
+- **Services:** 
+  - Full encapsulations, 
+  - partial encapsulations, 
+  - sump pump installs,
+  - French drain system exterior/interior,
+  - dehumidifier & condensation pump install, 
+  - crawlspace clean-out, 
+  - vapor barriers, 
+  - insulation install, 
+  - downspout extension, 
+  - mold remediation.
+- **Discounts:** 
+  - 10% military, 
+  - educator, and first responder discounts up to $1000 off.
+- **Location:** 
+  - Based in Columbia, SC, serving within a 2-hour radius.
+- **Warranty:** 
+  - Lifetime warranties on all installs.
+- **Reviews:** 
+  - 5-star Google rating with 17 reviews.
+- **Contact:** 
+  - Address: 351 Sunnycrest Lane, Columbia, SC 29229
+  - Email: vaporxcrawlspaces@gmail.com
+  - Phone: 803-638-3608
 
-This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
+## 2. Secret Sauce:
+- High-quality products and materials.
+- Affordable services.
+- Quick job turnaround.
+- Lifetime warranties.
+- 5-star Google rating.
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. It also includes the [Essential Next.js Build Plugin](https://github.com/netlify/netlify-plugin-nextjs), which will allow for you to implement features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing.
+## 3. Testimonials: 
+  - Check [Vapor X Crawlspaces on Google](https://www.google.com/search?q=vapor+x+crawlspaces&oq=vapor+x+craw&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgYIARBFGDkyDQgCEAAYhgMYgAQYigUyDQgDEAAYhgMYgAQYigUyDQgEEAAYhgMYgAQYigUyDQgFEAAYhgMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMjUzNmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x67a9cc13d57b0a3d:0x129a159ba0d26482,1,,,,) for 17, 5-star reviews.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+## 4. Links:
+- [Facebook](https://www.facebook.com/profile.php?id=100093247625359&mibextid=REkXMA)
+- [Instagram](https://www.instagram.com/vapor_xcrawlspaces?igsh=YTNudHR6bzBhanE4&utm_source=qr)
+- [Google](https://www.google.com/maps/place/Vapor-X+Crawlspaces/@34.3647698,-81.114492,9z/data=!4m2!3m1!1s0x0:0x129a159ba0d26482?sa=X&ved=2ahUKEwj9wIOE_K6DAxW9cDABHanNBjMQ_BJ6BAgPEAA)
+   
+## 5. Photos: 
+  - Before and after images will be provided soon.
 
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
-
-## Table of Contents:
-
-- [Getting Started](#getting-started)
-- [Installation options](#installation-options)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-### Installation options
-
-**Option one:** One-click deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
-
-**Option two:** Manual clone
-
-1. Clone this repo: `git clone https://github.com/netlify-templates/next-netlify-starter.git`
-2. Navigate to the directory and run `npm install`
-3. Run `npm run dev`
-4. Make your changes
-5. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
-
-## Testing
-
-### Included Default Testing
-
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
-
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
-```
-
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
-
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
-
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
-
-```bash
-npm uninstall -S cypress
-```
+## 6. Owner/Operator:
+- Sean Williams
+- Mobile: (803) 630-3608
+- Office: (203) 500-8209
+- Email: vaporxcrawlspaces@gmail.com
+- Website: [www.vaporxcrawlspaces.com](www.vaporxcrawlspaces.com)
