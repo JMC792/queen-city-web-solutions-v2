@@ -7,31 +7,23 @@
         "address" : "9044 Lawyers Rd Suite G, Charlotte, NC 28227",
         "addressLink" : ""
     },
-    "usefulLinks": {
-        "title": "Useful Links",
-        "link1": "home",
-        "link2": "about",
-        "link3": "blog",
-        "link4": "contact",
-        "link5": "service"
-    },
     "socialMedia": {
         "title" : "Follow Our Socials",
         "media1" : {
             "title": "Instagram",
-            "link": "https://www.instagram.com/krispycaptures"
+            "link": "https://www.instagram.com/vapor_xcrawlspaces?igsh=YTNudHR6bzBhanE4&utm_source=qr"
         },
         "media2" : {
             "title": "Youtube",
-            "link": "https://www.youtube.com/@krispycaptures"
+            "link": ""
         },
         "media3" : {
             "title":"Facebook",
-            "link": "https://www.facebook.com/krispycaptures"
+            "link": "https://www.facebook.com/profile.php?id=100093247625359"
         },
         "media4" : {
             "title":"Twitter",
-            "link": "https://twitter.com/krispycaptures"
+            "link": ""
         },
         "media5" : {
             "title":"TikTok",
@@ -41,12 +33,12 @@
     "contact": {
         "title" : "Contact",
         "phone" : {
-            "title":"(980)-298-9007",
-            "link": "tel: (980)-298-9007"
+            "title":"(803)-638-3608",
+            "link": "tel: (803)-638-3608"
         },
         "email" : {
-            "title":"vote4pedrog@gmail.com",
-            "link": "mailto: vote4pedrog@gmail.com"
+            "title":"vaporxcrawlspaces@gmail.com",
+            "link": "mailto: vaporxcrawlspaces@gmail.com"
         }
     },
     "trademark":{

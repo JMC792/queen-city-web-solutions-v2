@@ -1,6 +1,6 @@
-import Hero from "app/about/Hero2.js";
+import Hero from "@components/hero/Hero2.js";
 import { Fragment } from "react";
-import List from "app/portfolio/List.js";
+import List from "@components/blog/List1.js";
 
 import portfolio from "/public/locales/english/portfolio.json"
 import image2 from "public/images/portfolio/portfolio1.webp"

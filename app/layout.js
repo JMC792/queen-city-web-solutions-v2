@@ -1,6 +1,6 @@
 // These styles apply to every route in the application
-import Footer from 'app/(Footer)/Footer';
-import Navbar from 'app/(Navbar)/Navbar';
+import Footer from '@components/footer/Footer';
+import Navbar from '@components/headers/Navbar';
 import layout from '/public/locales/english/layout.json';
 
 // Data
@@ -36,7 +36,7 @@ export default function RootLayout({
         <Navbar
           link1 = {layout.sitemap.home} //Home
           link2 = {layout.sitemap.about} //About
-          link3 = {layout.sitemap.portfolio} //Portfolio
+          // link3 = {layout.sitemap.portfolio} //Portfolio
           link4 = {layout.sitemap.contact} //Contact
           link5 = {layout.sitemap.service} //Service
           phoneNumber = {layout.number}
@@ -52,14 +52,14 @@ export default function RootLayout({
           internal={[
             layout.sitemap.home, //Home
             layout.sitemap.about, //About
-            layout.sitemap.portfolio, //Portfolio
+            // layout.sitemap.portfolio, //Portfolio
             layout.sitemap.contact, //Contact
             layout.sitemap.service, //Service
           ]}
           outgoing={[
-            [footer.socialMedia.media1.title, footer.socialMedia.media1.link], //Facebook
-            [footer.socialMedia.media2.title, footer.socialMedia.media2.link], //Instagram
-            [footer.socialMedia.media3.title, footer.socialMedia.media3.link], //Twitter
+            [footer.socialMedia.media1.title, footer.socialMedia.media1.link], //Instagram
+            
+            [footer.socialMedia.media3.title, footer.socialMedia.media3.link], //Facebook
           ]}
           contact= {[
             [footer.contact.phone.title, footer.contact.phone.link, call, "call"],

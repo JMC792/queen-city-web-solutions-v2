@@ -4,7 +4,7 @@ import {Fragment} from "react";
 export default function Stat2(props){
     return(
         <Fragment>
-            <div className="bg-neutral-900 text-neutral-200">
+            <section className="bg-neutral-900 text-neutral-200" id="stats">
                 <div className="container py-32">
                     <div className="flex justify-center">
                         <div className='text-center grid gap-y-8 lg:grid-cols-3 lg:gap-x-[5rem]'>
@@ -24,7 +24,7 @@ export default function Stat2(props){
                     </div>
                     
                 </div>
-            </div>
+            </section>
         </Fragment>
     )
 }

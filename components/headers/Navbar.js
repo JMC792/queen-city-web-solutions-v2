@@ -11,7 +11,8 @@ import SideNav from './SideNav';
 import navbar from '/public/locales/english/navbar.json';
 
 //Images/SVG
-import menu from "/public/icons/menu.svg";
+import menu from "/public/icons/menu.svg"
+
 
 function Navbar(props) {
 

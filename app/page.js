@@ -1,32 +1,19 @@
 import {Fragment} from "react";
 //Components
-import Hero from "app/(homepage)/Hero";
-import About from "app/(homepage)/SBS-Left";
-import Mission from "app/(homepage)/SBS-Right";
-import Testimonials from "app/(homepage)/Testimonials";
-import Services from "app/(homepage)/Services";
-import List from "./portfolio/List";
+import Hero from "@components/hero/Hero";
+import Centered2x2 from "@components/features/Centered2x2";
+import TwoColumnDark from "@components/features/TwoColumnDark";
+import SimpleCentered from "@components/testimonials/SimpleCentered";
 
 //Locales/Data
 import language from "/public/locales/english/homepage.json";
-import about from "/public/locales/english/about.json";
-import services from "/public/locales/english/services.json";
-import data from "public/data/portfolio.json"
 
-//icons
-import SBS_Right from "public/images/homepage/about1.2.webp";
-import SBS_Left from "public/images/homepage/sbs2.1.webp";
-//images
-import image1 from "public/images/homepage/testimonial_1.svg";
-import image3 from "/public/images/homepage/jesus.svg"
-import image2 from "/public/images/homepage/person3.svg"
+// Icons
 
-import portfolio1 from "/public/images/portfolio/portfolio1.webp";
-import portfolio2 from "/public/images/portfolio/portfolio2.webp";
-import portfolio3 from "/public/images/portfolio/portfolio3.webp";
-import portfolio4 from "/public/images/portfolio/portfolio4.webp";
-import portfolio5 from "/public/images/portfolio/portfolio5.webp";
-import portfolio6 from "/public/images/portfolio/portfolio6.webp";
+// Images
+import image4 from "/public/images/homepage/homepage1.webp";
+import Newsletter from "../components/newsletter/CTA1";
+import ProductScreenshot from "@components/features/ProductScreenshot";
 
 export default function Page() {
   return (
@@ -37,65 +24,47 @@ export default function Page() {
               button={language.index.hero.button.title} 
               buttonLink={language.index.hero.button.link} 
             />
-            {/* <Pricing/> */}
-            <About 
-              heading={about.about1.heading} 
-              title={about.about1.title} 
-              paragraph={about.about1.paragraph} 
-              button={about.about1.button.title}
-              buttonLink={about.about1.button.link}
-              image={SBS_Right}
+
+            {/* Services */}
+            <Centered2x2
+              heading = {language.index.services.heading}
+              title = {language.index.services.title}
+              paragraph = {language.index.services.paragraph}
             />
-            <Services
-              heading={services.services.heading}
-              title={services.services.title}
-              paragraph={services.services.paragraph}
-              service={[
-                //Fundamentals 
-                [
-                    services.services.one.image,
-                    services.services.one.title,
-                    services.services.one.paragraph,
-                ],
-                //Advanced 
-                [
-                    services.services.two.image,
-                    services.services.two.title,
-                    services.services.two.paragraph
-                ],
-                //Private 
-                [
-                    services.services.three.image,
-                    services.services.three.title,
-                    services.services.three.paragraph
-                ],
-                //Muay Thai 
-                [
-                    services.services.four.image,
-                    services.services.four.title,
-                    language.index.services.four.paragraph
-                ]
-                ]}
-              button={language.index.services.button.title}
+
+            {/* About Us */}
+            <ProductScreenshot
+              heading={language.index.about.heading} 
+              title={language.index.about.title} 
+              paragraph={language.index.about.paragraph.one}
+              image={image4}
             />
-            <Mission 
-              heading={language.index.mission.heading} 
-              title={language.index.mission.title} 
-              paragraph={language.index.mission.paragraph} 
-              button={language.index.mission.button.title}
-              buttonLink={language.index.mission.button.link}
-              image={SBS_Left}
+
+            {/* Why Choose Us */}
+            <TwoColumnDark
+              heading={language.index.mission.heading}
+              title={language.index.mission.title}
+              paragraph1={language.index.mission.paragraph1}
+              paragraph2={language.index.mission.paragraph2}
+              paragraph3={language.index.mission.paragraph3}
+              paragraph4={language.index.mission.paragraph4}
             />
-            <Testimonials 
-              language = {language}
-              heading={language.index.testimonial.heading}
-              title={language.index.testimonial.title}
-              person = {language.index.testimonial.person}
-              images = {[image1,image3,image2]}
+
+            {/* Testimonial */}
+            <SimpleCentered
+              name={language.index.testimonials.name}
+              paragraph={language.index.testimonials.paragraph}
+              position={language.index.testimonials.position}
             />
-            <List
-              images={[portfolio1,portfolio2,portfolio3,portfolio4,portfolio5,portfolio6]}
-              blogData={data}
+
+            {/* Newsletter */}
+            <Newsletter
+              heading={language.index.newsletter.heading}
+              title={language.index.newsletter.title}
+              sentence={language.index.newsletter.sentence}
+              button={language.index.newsletter.button.title}
+              buttonLink={language.index.newsletter.button.link}
+              background="bg-back-2"
             />
         </Fragment>
   );

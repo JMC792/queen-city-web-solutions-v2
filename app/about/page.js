@@ -1,19 +1,21 @@
 import { Fragment } from "react";
 //locales
 import about from "public/locales/english/about.json";
+import language from "public/locales/english/homepage.json";
+
 // Components
-import Hero2 from "./Hero2.js";
-import About2 from "app/(homepage)/SBS-Right.js";
-import Stat2 from "app/about/Stat2.js";
-import About1 from "app/(homepage)/SBS-Left.js";
+import Hero2 from "../../components/hero/Hero2.js";
+import About1 from "@components/side-by-side/SBS-Left.js";
+import ProductScreenshot from "@components/features/ProductScreenshot.js";
+import TwoColumnDark from "@components/features/TwoColumnDark.js";
+import Newsletter from "@components/newsletter/CTA1.js";
+
 //Images
-import about1 from "public/images/about/about1.webp"
 import about2 from "public/images/homepage/about1.2.webp";
+import image4 from "/public/images/homepage/homepage1.webp";
 
 //SVG
-import phone from "public/icons/phone2.svg"
-import customer from "public/icons/customer.svg"
-import tick from "public/icons/tick.svg"
+
 
 export const metadata = {
   title:"About Us"
@@ -28,22 +30,28 @@ export default function Page() {
         heroSubtitle={about.hero.subtitle}  
         background={"bg-back-about"}
       />
-      <About2 
-        heading={about.about2.heading} 
-        title={about.about2.title} 
-        paragraph={about.about2.paragraph} 
-        button={about.about2.button.title}
-        buttonLink={about.about2.button.link}
-        image={about1}
+      <ProductScreenshot
+        heading={language.index.about.heading} 
+        title={language.index.about.title} 
+        paragraph={language.index.about.paragraph.one}
+        image={image4}
       />
-      <About1 
-        heading={about.about1.heading} 
-        title={about.about1.title} 
-        paragraph={about.about1.paragraph} 
-        button={about.about1.button.title}
-        buttonLink={about.about1.button.link}
-        image={about2}
-            />
+      <TwoColumnDark
+        heading={language.index.mission.heading}
+        title={language.index.mission.title}
+        paragraph1={language.index.mission.paragraph1}
+        paragraph2={language.index.mission.paragraph2}
+        paragraph3={language.index.mission.paragraph3}
+        paragraph4={language.index.mission.paragraph4}
+      />
+      <Newsletter
+        heading={language.index.newsletter.heading}
+        title={language.index.newsletter.title}
+        sentence={language.index.newsletter.sentence}
+        button={language.index.newsletter.button.title}
+        buttonLink={language.index.newsletter.button.link}
+        background="bg-back-2"
+      />
     </Fragment>
   );
 }
