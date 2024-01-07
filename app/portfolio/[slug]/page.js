@@ -1,8 +1,16 @@
 import { Fragment } from "react";
-import Hero3 from "@component/hero/Hero3.js";
+
+// Locales
 import slug from "public/locales/english/slug.json"
-import Article from "@component/content/Article.js";
+
+// Components
+import Hero3 from "@components/hero/Hero3.js";
+import Article from "@components/content/Article.js";
+
+// Images
 import about4 from "public/images/portfolio/portfolio1.webp"
+
+//API
 import { getBlogBySlug } from "lib/api";
 
 

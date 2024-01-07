@@ -1,11 +1,8 @@
 import { Fragment } from "react";
 
 //Components
-import Contact3 from "@components/contact/Form1.js";
 import Hero2 from "@components/hero/Hero2.js";
-import Stat from "@components/stats/Stat2.js";
 import Form3 from "@components/forms/Form3.js";
-import Form1 from "@components/contact/Form1.js";
 
 //Locales
 import layout from "public/locales/english/layout.json";
