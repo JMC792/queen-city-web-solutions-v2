@@ -7,7 +7,7 @@ export default function Hero2(props) {
         <Fragment>
 
             {/* Hero Background */}
-            <div className={"h-1/5 bg-cover " + props.background} id="header">
+            <div className={"h-1/5 bg-cover bg-center " + props.background} id="header">
                 {/* Hero Container */}
                 <div className="container flex justify-center">
                     {/* Horizontal Margin and Padding */}
