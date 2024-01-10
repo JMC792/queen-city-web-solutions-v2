@@ -36,7 +36,7 @@ export default function RootLayout({
         <Navbar
           link1 = {layout.sitemap.home} //Home
           link2 = {layout.sitemap.about} //About
-          // link3 = {layout.sitemap.portfolio} //Portfolio
+          link3 = {layout.sitemap.portfolio} //Portfolio
           link4 = {layout.sitemap.contact} //Contact
           link5 = {layout.sitemap.service} //Service
           phoneNumber = {layout.number}
@@ -52,7 +52,7 @@ export default function RootLayout({
           internal={[
             layout.sitemap.home, //Home
             layout.sitemap.about, //About
-            // layout.sitemap.portfolio, //Portfolio
+            layout.sitemap.portfolio, //Portfolio
             layout.sitemap.contact, //Contact
             layout.sitemap.service, //Service
           ]}
