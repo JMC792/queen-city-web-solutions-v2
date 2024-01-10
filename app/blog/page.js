@@ -19,10 +19,7 @@ export default function Page(){
                 heroSubtitle={blog.hero.subtitle}
                 background={"bg-back-about"}
             />
-            <List
-                image={about4}
-                blogData={blogData}
-            />
+            
         </Fragment>
     )
 }
