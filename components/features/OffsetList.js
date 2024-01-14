@@ -3,11 +3,11 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 const features = [
     {
         name: 'Full Encapsulations',
-        description: 'Comprehensive encapsulation solutions for complete protection against moisture, mold, and pests.',
+        description: 'Comprehensive encapsulation solutions for complete protection against moisture, mold.',
     },
     {
         name: 'Partial Encapsulations',
-        description: 'Targeted encapsulation services for specific areas, providing effective moisture and pest control.',
+        description: 'Targeted encapsulation services for specific areas, providing effective moisture.',
     },
     {
         name: 'Sump Pump Installs',
@@ -23,7 +23,7 @@ const features = [
     },
     {
         name: 'Crawlspace Clean-Out',
-        description: 'Thorough clean-out services to remove debris, pests, and contaminants, ensuring a clean and healthy crawlspace environment.',
+        description: 'Thorough clean-out services to remove debris and contaminants, ensuring a clean and healthy crawlspace environment.',
     },
     {
         name: 'Vapor Barriers',

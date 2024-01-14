@@ -5,13 +5,13 @@ const features = [
     {
     name: 'Full encapsulations',
     description:
-        'Enhance your home`s health and efficiency with our Full Crawlspace Encapsulation. Seal out moisture and pests, ensuring a safer, mold-free environment',
+        'Enhance your home`s health and efficiency with our Full Crawlspace Encapsulation. Seal out moisture, ensuring a safer, mold-free environment',
     icon: CloudArrowUpIcon,
     },
     {
     name: 'Partial Encapsulations',
     description:
-        'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+        'Optimize your home`s protection with Partial Crawlspace Encapsulation. Tailored to target key areas, it offers effective moisture and mold defense',
     icon: LockClosedIcon,
     },
     {
@@ -23,7 +23,7 @@ const features = [
     {
     name: 'French drain system exterior/interior',
     description:
-        'Optimize your home`s protection with Partial Crawlspace Encapsulation. Tailored to target key areas, it offers effective moisture and mold defense',
+        'Efficiently manage water around your home with our French Drain System installation. Designed for optimal drainage, it effectively prevents water accumulation and safeguards your property foundation',
     icon: FingerPrintIcon,
     },
 ]
