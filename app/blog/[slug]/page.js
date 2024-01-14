@@ -6,7 +6,7 @@ import about4 from "public/images/portfolio/portfolio1.webp"
 import { getBlogBySlug } from "lib/api";
 
 export const metadata = {
-    title: [blog.metadata.title],
+    title: 'Blog',
     description: [blog.metadata.description],
 }
 

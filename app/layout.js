@@ -14,7 +14,7 @@ import email from "public/icons/email.svg"
 
 export const metadata = {
   title: {
-    template: "%s | " + [layout.title],
+    //template: "%s | " + [layout.title],
     default: [layout.title],
   },
   description: {default: [layout.description]},
