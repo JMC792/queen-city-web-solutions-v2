@@ -11,7 +11,8 @@ import SideNav from './SideNav';
 import navbar from '/public/locales/english/navbar.json';
 
 //Images/SVG
-import menu from "/public/icons/menu.svg"
+import { Bars3Icon } from '@heroicons/react/24/solid'
+
 
 
 function Navbar(props) {
@@ -118,7 +119,7 @@ function Navbar(props) {
                             {/* Off-canvas Menu */}
                             <div className="flex lg:hidden">
                                 <div onClick={showOffcanvas} id="toggle-button">
-                                    <Image src={menu} width={30} alt={"logo"}/>
+                                    <Bars3Icon className="h-6 w-6 text-white" />
                                 </div>
                             </div>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {Fragment} from "react";
+import Image from "next/image";
 
 export default function Hero2(props) {
 
@@ -7,7 +8,14 @@ export default function Hero2(props) {
         <Fragment>
 
             {/* Hero Background */}
-            <div className={"h-1/5 bg-cover bg-center " + props.background} id="header">
+            <div className={"h-1/5 relative"} id="header">
+            <Image
+                src={'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&&exp=-35&q=100&w=2070&auto=format&fit=crop&blur=20'}
+                alt="Background"
+                fill
+                quality={90}
+                className="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
                 {/* Hero Container */}
                 <div className="container flex justify-center">
                     {/* Horizontal Margin and Padding */}

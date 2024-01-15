@@ -9,13 +9,9 @@ import layout from "public/locales/english/layout.json";
 import contact from "public/locales/english/contact.json";
 
 //SVG
-import phone from "public/icons/phone2.svg"
-import customer from "public/icons/customer.svg"
-import tick from "public/icons/tick.svg"
 
 
 // Images
-import image1 from "public/images/homepage/sbs2.1.webp";
 
 export const metadata = {
   title: "Contact Us",
@@ -37,7 +33,6 @@ export default async function Page() {
         paragraph = {contact.form.paragraph}
         phone = {layout.number}
         email = {layout.email}
-        image = {image1}
       />
       {/* <Stat
           service = {[

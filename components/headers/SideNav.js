@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import close from "/public/icons/close.svg";
+
+//Components
+import {XMarkIcon} from "@heroicons/react/20/solid";
 
 export default function SideNav(props){
 
@@ -33,11 +35,7 @@ export default function SideNav(props){
 
                             {/* Close Button */}
                             <button className="menu-bars text-[24px] opacity-80 hover:opacity-50 transition-all" aria-label="Right Align">
-                                <Image 
-                                    src={close} 
-                                    width={20} 
-                                    alt={"logo"} 
-                                />
+                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </div>
 

@@ -5,13 +5,11 @@ import language from "public/locales/english/homepage.json";
 
 // Components
 import Hero2 from "../../components/hero/Hero2.js";
-import About1 from "@components/side-by-side/SBS-Left.js";
 import ProductScreenshot from "@components/features/ProductScreenshot.js";
 import TwoColumnDark from "@components/features/TwoColumnDark.js";
 import Newsletter from "@components/newsletter/CTA1.js";
 
 //Images
-import about2 from "public/images/homepage/about1.2.webp";
 import image4 from "/public/images/homepage/homepage1.webp";
 
 //SVG

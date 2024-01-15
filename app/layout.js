@@ -15,7 +15,7 @@ import email from "public/icons/email.svg"
 export const metadata = {
   title: {
     //template: "%s | " + [layout.title],
-    default: [layout.title],
+    default: 'Vapor X Crawlspaces',
   },
   description: {default: [layout.description]},
   appliationName: [layout.applicationName],

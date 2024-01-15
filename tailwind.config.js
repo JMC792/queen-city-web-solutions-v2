@@ -37,11 +37,6 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: {
-        'back-about': "url('..//public/images/about/hero.webp')",
-        'back-2': "url('..//public/images/homepage/hero.webp')",
-        'back-4': "url('..//public/images/blog/hero.webp')",
-        'back-5': "url('..//public/images/contact/contactHero.webp')",
-        'back-6': "url('..//public/images/services/servicesHero.webp')",
       }
     },
   },

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {Fragment} from "react";
+import Image from "next/image";
 
 export default function Hero({title,subtitle,button}) {
 
@@ -7,9 +8,17 @@ export default function Hero({title,subtitle,button}) {
         <Fragment>
 
             {/* Hero Background */}
-            <div className="h-screen bg-back-2 bg-cover" id="header">
+            <div className="bg-gray-900" id="header">
                 {/* Hero Container */}
-                <div className="">
+                <div className="relative isolate overflow-hidden h-screen">
+                    <Image
+                        src={'https://images.unsplash.com/photo-1645651964715-d200ce0939cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&&exp=-35&q=100&w=2070&auto=format&fit=crop'}
+                        alt="Background"
+                        fill
+                        priority={true}
+                        quality={90}
+                        className="absolute inset-0 -z-10 h-full w-full object-cover"
+                    />
                     {/* Horizontal Margin and Padding */}
                     <div className="pt-[13rem] md:pt-[15rem] lg:pt-[16rem]">
                         {/* Vertical Margin and Padding */}
@@ -35,9 +44,9 @@ export default function Hero({title,subtitle,button}) {
                                 </h1>
 
                                 {/* Subtitle */}
-                                <p className="mt-6 text-lg leading-8 text-gray-300">
+                                <h2 className="mt-6 text-lg leading-8 text-gray-300">
                                     {subtitle}
-                                </p>
+                                </h2>
 
                                 {/* Buttons */}
                                 <div className="mt-10 flex items-center justify-center gap-x-6">
