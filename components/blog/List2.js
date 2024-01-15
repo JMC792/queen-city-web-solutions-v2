@@ -1,10 +1,11 @@
     import Image from "next/image";
+    import Link from "next/link";
     
     const posts = [
     {
         id: 1,
         title: "Boost your conversion rate",
-        href: "#",
+        href: "post-1",
         description:
             "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
         imageUrl:
@@ -20,7 +21,7 @@
     {
         id: 2,
         title: "Boost your conversion rate",
-        href: "#",
+        href: "post-2",
         description:
             "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
         imageUrl:
@@ -36,7 +37,7 @@
     {
         id: 3,
         title: "Boost your conversion rate",
-        href: "#",
+        href: "post-3",
         description:
             "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
         imageUrl:
@@ -103,10 +104,10 @@
                     </div>
                 </div>
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                <a href={post.href}>
+                <Link href={"/blog/" + post.href}>
                     <span className="absolute inset-0" />
                     {post.title}
-                </a>
+                </Link>
                 </h3>
             </article>
             ))}

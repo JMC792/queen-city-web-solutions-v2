@@ -7,7 +7,7 @@ export default function Hero3({heroSubtitle, slug}) {
         <Fragment>
 
             {/* Hero Background */}
-            <div className="h-1/5 bg-back-4 bg-cover" id="header">
+            <div className="h-1/5 bg-neutral-700 bg-cover" id="header">
                 {/* Hero Container */}
                 <div className="container flex justify-center lg:justify-start">
                     {/* Horizontal Margin and Padding */}

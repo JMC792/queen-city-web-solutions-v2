@@ -1,9 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import calendar from "public/icons/calendar.svg"
-import person from "public/icons/person.svg"
-import arrow from "public/icons/arrow.svg"
 
 export default function Article(props){
 
@@ -33,15 +30,17 @@ export default function Article(props){
                         <div className="flex justify-center gap-x-4 text-gray-500">
                             {/* Date */}
                             <div className="flex items-center gap-x-1">
-                                <Image src={calendar} width={20} alt="calendar icon"/>
                                 <div className="">
                                     {props.blogData.date}
                                 </div>
                             </div>
 
+                            <p>
+                                |
+                            </p>
+
                             {/* Author */}
                             <div className="flex items-center gap-x-1">
-                                <Image src={person} width={25} alt="Person Icon"/>
                                 <div>
                                     {props.blogData.author}
                                 </div>
@@ -51,7 +50,14 @@ export default function Article(props){
 
                     {/*  Image */}
                     <div className="flex justify-center">
-                        <Image src={props.image} alt="2 people" width={1000} className="rounded-xl" decoding="async"/>
+                        <Image 
+                            src={"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} 
+                            alt="2 people" 
+                            width={1000}
+                            height={500} 
+                            className="rounded-xl" 
+                            decoding="async"
+                        />
                     </div>
 
                     {/* Paragraphs Wrapper */}
@@ -77,7 +83,6 @@ export default function Article(props){
 
                     <div className="flex justify-center hover:scale-125 hover:duration-300">
                         <Link href="/blog" className="flex items-center">
-                            <Image src={arrow} width={20} alt="Arrow Back"/>
                             <div className="text-purple-700">View All Posts</div>
                         </Link>
                         
