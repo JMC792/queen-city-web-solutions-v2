@@ -119,7 +119,7 @@ function Navbar(props) {
                             {/* Off-canvas Menu */}
                             <div className="flex lg:hidden">
                                 <div onClick={showOffcanvas} id="toggle-button">
-                                    <Bars3Icon className="h-6 w-6 text-white" />
+                                    <Bars3Icon className="h-6 w-6 text-primary" />
                                 </div>
                             </div>
 
