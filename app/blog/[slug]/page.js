@@ -1,12 +1,12 @@
 import { Fragment } from "react";
-import Hero3 from "./Hero3.js";
+import Hero3 from "../../../components/hero/Hero3.js";
 import blog from "/public/locales/english/blog.json"
-import Article from "./Article.js";
+import Article from "../../../components/content/Article.js";
 import about4 from "public/images/portfolio/portfolio1.webp"
 import { getBlogBySlug } from "lib/api";
 
 export const metadata = {
-    title: [blog.metadata.title],
+    title: 'Blog',
     description: [blog.metadata.description],
 }
 

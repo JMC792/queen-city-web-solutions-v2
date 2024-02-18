@@ -5,8 +5,8 @@
         "description": ""
     },
     "hero": {
-        "title": "Capturing Moments, Crafting Memories",
-        "subtitle": "At Krispy Captures, we specialize in turning fleeting moments into lasting impressions. Experience the pinnacle of photography with a creative edge in Charlotte, NC",
+        "title": "Protect Your Home's Foundation with Confidence!",
+        "subtitle": "Discover top-notch crawlspace solutions in Columbia, SC. Special discounts for military, educators, and seniors. Ensure a dry, efficient home today",
         "button": {
             "title": "Get Started",
             "link": "/contact"
@@ -14,8 +14,8 @@
     },
     "services": {
         "heading": "Our Services",
-        "title": "Diverse Photography Services",
-        "paragraph": "Specializing in Commercial, Real Estate, Graduation, and Aerial Photography, we offer a wide array of professional photography services to meet all your needs",
+        "title": "Comprehensive Crawlspace Services",
+        "paragraph": "Discover top-notch crawlspace solutions in Columbia, SC. Special discounts for military, educators, and first responders. Ensure a dry, efficient home today",
         "one":{
             "image": "/icons/Homepage/svg2.1.svg",
             "title": "Commercials",
@@ -44,7 +44,10 @@
     "about": {
         "heading": "About Us",
         "title": "Our Journey and Passion",
-        "paragraph": "Founded by Pedro, a talented photographer with over 5 years of experience, Krispy Capturesw began as a Hispanic-owned venture in Charlotte, NC, dedicated to capturing life's precious moments with authenticity and artistry.",
+        "paragraph": {
+            "one" : "Being established in Columbia, SC since 2023, Vapor-X Crawlspaces has been known for an unparalleled commitment to customer satisfaction. It’s this standard of excellence that has provided the impetus for us to grow into the business we are today. With our low affordable pricing and smaller company size, we are able to provide quality services at a fraction of the cost of larger companies.",
+            "two" : ""
+        },
         "button": {
             "title": "Join Us",
             "link": "/contact"
@@ -81,31 +84,20 @@
             "closed": "Closed"
         }
     },
-    "testimonial": {
+    "testimonials": {
         "heading": "Success Stories",
         "title": "Hear What Our Members Say",
-        "person": {
-            "first": {
-                "name": "Mauricio Chavez",
-                "position": "Queen City Web Solutions",
-                "paragraph": "Queen City Web Solutions is thrilled with the exceptional quality of work delivered by Krispy Captures. Their eye for detail and creative approach to aerial photography has provided us with truly captivating visuals that have elevated our web design projects. The professionalism and skill exhibited by the Krispy Captures team are unmatched, making them our go-to for all our photography needs."
-            },
-            "second": {
-                "name": "Julio Zaconet",
-                "position": "Valentin Law",
-                "paragraph": "Valentin Law expresses immense gratitude to Krispy Captures for their extraordinary commercial photography. Their keen eye for detail and aesthetic finesse have greatly enhanced our brand's visual appeal, making a profound impact in our marketing materials. The quality and creativity Krispy Captures brings to each project are truly exceptional."
-            },
-            "third": {
-                "name": "Andres Ponce",
-                "position": "Ramansco Construction",
-                "paragraph": "Ramansco Construction is thoroughly impressed with the real estate photography services provided by Krispy Captures. Their ability to showcase our construction projects with such clarity and elegance has been instrumental in attracting potential clients and investors. The Krispy Captures team's talent for capturing the unique character of each property is unmatched, and their work has added significant value to our portfolio"
-            }
-        }
+        "name": "Mauricio Chavez",
+        "position": "Queen City Web Solutions",
+        "paragraph": "Queen City Web Solutions is thrilled with the exceptional quality of work delivered by Krispy Captures. Their eye for detail and creative approach to aerial photography has provided us with truly captivating visuals that have elevated our web design projects. The professionalism and skill exhibited by the Krispy Captures team are unmatched, making them our go-to for all our photography needs."
     },
     "mission": {
         "heading": "Why Choose Us",
         "title": "Pixel Perfect Portraits",
-        "paragraph": "As a Latin-owned business, we bring a unique and inclusive perspective to every project. Our expertise in the automotive field is unparalleled, having partnered with influential blogs and platforms, including BMW BLOG. This experience enriches our ability to capture not just images, but stories, ensuring each portrait is more than just pixel perfect—it's a reflection of our dedication and diverse skill set",
+        "paragraph1": "We're not just service providers; we're local experts. With years of experience in Columbia, SC, we understand the unique challenges that our climate and geography present to crawlspaces. Our specialized knowledge ensures that we offer the most effective and efficient solutions tailored to your home's specific needs.",
+        "paragraph2": "Quality is at the heart of everything we do. We use only the best materials and cutting-edge techniques to ensure long-lasting results. Our reliable team is committed to completing every project with the utmost care and precision, ensuring that your crawlspace remains safe and secure for years to come.",
+        "paragraph3": "We take a customer-centric approach, meaning we listen to your concerns, respect your schedule, and customize our services to meet your specific needs. We believe in building lasting relationships with our clients, and your satisfaction is our top priority.",
+        "paragraph4": "We offer a full range of crawlspace services - from encapsulation and insulation to repair and maintenance. What's more, we provide these comprehensive services at competitive prices, ensuring you get the best value without compromising on quality. Plus, our special discounts for military, first responders, educators, and seniors make our services even more accessible.",
         "button": {
             "title": "Get in Touch",
             "link": "/contact"
@@ -149,7 +141,7 @@
     "newsletter": {
         "heading": "Stay Informed and Inspired!",
         "title": "Subscribe to Our Jiu Jitsu Updates",
-        "sentence": "Stay up to date with the latest news, training tips, and events from our Brazilian Jiu Jitsu gym. Join our community and ignite your passion for Jiu Jitsu!",
+        "sentence": "Your home deserves the best care, and our expert team at Vapor X Crawlspaces is here to deliver just that. Whether it's for crawlspace encapsulation, repair, or maintenance, we're ready to provide top-quality, personalized solutions for your home ",
         "button": {
             "title": "Subscribe Now",
             "link": "/contact"

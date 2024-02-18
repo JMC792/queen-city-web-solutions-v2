@@ -1,6 +1,6 @@
 // These styles apply to every route in the application
-import Footer from 'app/(Footer)/Footer';
-import Navbar from 'app/(Navbar)/Navbar';
+import Footer from '@components/footer/Footer';
+import Navbar from '@components/headers/Navbar';
 import layout from '/public/locales/english/layout.json';
 
 // Data
@@ -14,8 +14,8 @@ import email from "public/icons/email.svg"
 
 export const metadata = {
   title: {
-    template: "%s | " + [layout.title],
-    default: [layout.title],
+    //template: "%s | " + [layout.title],
+    default: 'Vapor X Crawlspaces',
   },
   description: {default: [layout.description]},
   appliationName: [layout.applicationName],
@@ -57,9 +57,9 @@ export default function RootLayout({
             layout.sitemap.service, //Service
           ]}
           outgoing={[
-            [footer.socialMedia.media1.title, footer.socialMedia.media1.link], //Facebook
-            [footer.socialMedia.media2.title, footer.socialMedia.media2.link], //Instagram
-            [footer.socialMedia.media3.title, footer.socialMedia.media3.link], //Twitter
+            [footer.socialMedia.media1.title, footer.socialMedia.media1.link], //Instagram
+            
+            [footer.socialMedia.media3.title, footer.socialMedia.media3.link], //Facebook
           ]}
           contact= {[
             [footer.contact.phone.title, footer.contact.phone.link, call, "call"],

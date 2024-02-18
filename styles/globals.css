@@ -11,6 +11,14 @@ body {
   box-sizing: border-box;
 }
 
+.text-primary {
+  @apply text-blue-400;
+}
+
+.text-secondary {
+  @apply text-blue-900;
+}
+
 /* Animations */
 @keyframes slide-from-opacity {
   0% {
@@ -25,7 +33,15 @@ body {
 
 
 .animate-slide-from-opacity {
+  animation : slide-from-opacity 1s ease-in-out
+}
+
+.animate-slide-from-opacity-2 {
   animation : slide-from-opacity 1.5s ease-in-out
+}
+
+.animate-slide-from-opacity-3 {
+  animation : slide-from-opacity 2s ease-in-out;
 }
 
 /* NavbarArea CSS*/

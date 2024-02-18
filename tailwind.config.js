@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,16 +34,13 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)']
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: {
-        'back-about': "url('..//public/images/about/hero.webp')",
-        'back-2': "url('..//public/images/homepage/hero.webp')",
-        'back-4': "url('..//public/images/blog/hero.webp')",
-        'back-5': "url('..//public/images/contact/contactHero.webp')",
-        'back-6': "url('..//public/images/services/servicesHero.webp')",
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
