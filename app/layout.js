@@ -52,7 +52,7 @@ export default function RootLayout({
           internal={[
             layout.sitemap.home, //Home
             layout.sitemap.about, //About
-            layout.sitemap.portfolio, //Portfolio
+            //layout.sitemap.portfolio, //Portfolio
             layout.sitemap.contact, //Contact
             layout.sitemap.service, //Service
           ]}
