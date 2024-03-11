@@ -18,10 +18,6 @@ const features = [
         description: 'Guidance and support for individuals seeking to change their legal status to lawful permanent resident within the United States.',
     },
     {
-        name: 'Consular Processing',
-        description: 'Assistance with obtaining visas through U.S. consulates abroad, facilitating lawful entry into the United States for various purposes.',
-    },
-    {
         name: 'Naturalizations',
         description: 'Support and representation for individuals seeking to become U.S. citizens through the naturalization process.',
     },
