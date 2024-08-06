@@ -28,10 +28,10 @@ const navigation = {
     { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'Home', href: '/home' },
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Services', href: '/Services' },
+    { name: 'Services', href: '/service' },
   ],
   legal: [
     { name: 'Claim', href: '#' },
