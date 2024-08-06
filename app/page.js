@@ -1,9 +1,20 @@
 import {Fragment} from "react";
 //Components
 import Hero from "@components/hero/Hero";
-import Centered2x2 from "@components/features/Centered2x2";
-import TwoColumnDark from "@components/features/TwoColumnDark";
 import SimpleCentered from "@components/testimonials/SimpleCentered";
+//Components
+import OffsetList from "@components/features/OffsetList.js";
+import Form3 from "@components/forms/Form3.js";
+import Stat from "@components/stats/Stat.js";
+import CTA from "@components/cta/CTA1.js";
+import FAQ1 from "@components/FAQ/FAQ1.js";
+
+//Locales
+import layout from "public/locales/english/layout.json";
+import contact from "public/locales/english/contact.json";
+
+//Locales
+import service from "public/locales/english/services.json";
 
 //Locales/Data
 import language from "/public/locales/english/homepage.json";
@@ -12,7 +23,6 @@ import language from "/public/locales/english/homepage.json";
 
 // Images
 import image4 from "/public/images/homepage/photo1.jpeg";
-import Newsletter from "../components/newsletter/CTA1";
 import ProductScreenshot from "@components/features/ProductScreenshot";
 
 export default function Page() {
@@ -24,12 +34,11 @@ export default function Page() {
               button={language.index.hero.button.title} 
               buttonLink={language.index.hero.button.link} 
             />
-
-            {/* Services */}
-            <Centered2x2
-              heading = {language.index.services.heading}
-              title = {language.index.services.title}
-              paragraph = {language.index.services.paragraph}
+            <Stat/>
+            <OffsetList
+              heading={service.section1.heading}
+              title={service.section1.title}
+              paragraph={service.section1.paragraph}
             />
 
             {/* About Us */}
@@ -40,33 +49,14 @@ export default function Page() {
               image={image4}
             />
 
-            {/* Why Choose Us */}
-            {/* <TwoColumnDark
-              heading={language.index.mission.heading}
-              title={language.index.mission.title}
-              paragraph1={language.index.mission.paragraph1}
-              paragraph2={language.index.mission.paragraph2}
-              paragraph3={language.index.mission.paragraph3}
-              paragraph4={language.index.mission.paragraph4}
-            /> */}
-
             {/* Testimonial */}
             <SimpleCentered
               name={language.index.testimonials.name}
               paragraph={language.index.testimonials.paragraph}
               position={language.index.testimonials.position}
             />
-            
-
-            {/* Newsletter */}
-            {/* <Newsletter
-              heading={language.index.newsletter.heading}
-              title={language.index.newsletter.title}
-              sentence={language.index.newsletter.sentence}
-              button={language.index.newsletter.button.title}
-              buttonLink={language.index.newsletter.button.link}
-              background="bg-back-2"
-            /> */}
+            <CTA/>
+            <FAQ1/>
         </Fragment>
   );
 }

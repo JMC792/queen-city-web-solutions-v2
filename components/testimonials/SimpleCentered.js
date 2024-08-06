@@ -17,7 +17,7 @@ export default function Example(props) {
                     {/* Paragraph */}
                     <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
                         <p>
-                            {props.paragraph}
+                        My experience with Queen City Web Solutions has been exceptional. They fortified my business computer with top-notch antivirus software, state-of-the-art EDR, and robust network security
                         </p>
                     </blockquote>
 
@@ -25,23 +25,23 @@ export default function Example(props) {
                     <figcaption className="mt-10">
                         
                         {/* Logo */}
-                        {/* <img className="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/> */}
+                        <img className="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
 
                         {/* Name & Position */}
                         <div className="mt-4 flex items-center justify-center space-x-3 text-base">
                             
                             {/* Name */}
-                            <div className="font-semibold text-gray-900">{props.name}</div>
+                            <div className="font-semibold text-gray-900">Emily Sanchez</div>
 
                             {/* Bullet */}
-                            {/* <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-gray-900">
+                            <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-gray-900">
                                 <circle cx={1} cy={1} r={1} />
-                            </svg> */}
+                            </svg>
 
                             {/* Position */}
-                            {/* <div className="text-gray-600">
+                            <div className="text-gray-600">
                                 {props.position}
-                            </div> */}
+                            </div>
 
                         </div>
                     </figcaption>

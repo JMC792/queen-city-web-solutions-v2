@@ -6,8 +6,6 @@ import language from "public/locales/english/homepage.json";
 // Components
 import Hero2 from "../../components/hero/Hero2.js";
 import ProductScreenshot from "@components/features/ProductScreenshot.js";
-import TwoColumnDark from "@components/features/TwoColumnDark.js";
-import Newsletter from "@components/newsletter/CTA1.js";
 
 //Images
 import image4 from "/public/images/homepage/photo1.jpeg";

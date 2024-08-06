@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Hero({title,subtitle,button}) {
 
     const text = {
-        title: "Fight for your American Dream with Proven and Trustworthy Representation",
-        subtitle: "Explore premier immigration services. While based in Atlanta, Georgia, Valentin Law, LLC is able to provide representation in 50 states. Immigration for All",
+        title: "Building Brands, One Pixel at a Time",
+        subtitle: "We're dedicated to shaping digital landscapes with awe-inspiring web design and development. Our mission is to bring your brand's story to life through visually captivating and functionally flawless websites.",
         button1: "Get started",
         button2: "Learn more"
     }
@@ -19,7 +19,7 @@ export default function Hero({title,subtitle,button}) {
                 {/* Hero Container */}
                 <div className="relative isolate overflow-hidden h-screen">
                     <Image
-                        src={'https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&&exp=-35&q=100&w=2070&auto=format&fit=crop'}
+                        src={'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&&exp=-35&q=100&w=2070&auto=format&fit=crop'}
                         alt="Background"
                         fill
                         priority={true}
@@ -47,12 +47,12 @@ export default function Hero({title,subtitle,button}) {
                                 
                                 {/* Paragraph */}
                                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                                    {title}
+                                    {text.title}
                                 </h1>
 
                                 {/* Subtitle */}
                                 <h2 className="mt-6 text-lg leading-8 text-gray-300">
-                                    {subtitle}
+                                    {text.subtitle}
                                 </h2>
 
                                 {/* Buttons */}

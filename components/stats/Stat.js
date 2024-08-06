@@ -1,132 +1,48 @@
-import {Fragment} from "react";
-
-function stat({stat}){
-
-    return(
-        <Fragment>
-            {/* stat */}
-            <div className="bg-back-7 bg-cover bg-right-top text-neutral-200">
-                <div className="container py-32">
-                    <div className="flex justify-center">
-                        <div className='text-center grid lg:grid-cols-3 gap-y-20 lg:gap-x-[8rem]'>
-
-                            {/* Monday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[0][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[0][1][0]}</div>
-                                        <div>{stat[0][1][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[0][2][0]}</div>
-                                        <div>{stat[0][2][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[0][3][0]}</div>
-                                        <div>{stat[0][3][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Tuesday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[1][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[1][1][0]}</div>
-                                        <div>{stat[1][1][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[1][2][0]}</div>
-                                        <div>{stat[1][2][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[1][3][0]}</div>
-                                        <div>{stat[1][3][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Wednesday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[2][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[2][1][0]}</div>
-                                        <div>{stat[2][1][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[2][2][0]}</div>
-                                        <div>{stat[2][2][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[2][3][0]}</div>
-                                        <div>{stat[2][3][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[2][4][0]}</div>
-                                        <div>{stat[2][4][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Thursday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[3][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[1][1][0]}</div>
-                                        <div>{stat[1][1][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[1][2][0]}</div>
-                                        <div>{stat[1][2][1]}</div>
-                                    </li>
-                                    <li>
-                                        <div>{stat[1][3][0]}</div>
-                                        <div>{stat[1][3][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Friday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[4][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[4][1][0]}</div>
-                                        <div>{stat[4][1][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Saturday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[5][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[5][1][0]}</div>
-                                        <div>{stat[5][1][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            {/* Sunday */}
-                            <div className="">
-                                <h3 className="text-3xl font-medium capitalize">{stat[6][0]}</h3>
-                                <ul className= "pt-4 grid gap-y-5 text-md">
-                                    <li>
-                                        <div>{stat[6][1]}</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+export default function Example() {
+    return (
+        <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+            Trusted by the world’s most innovative teams
+            </h2>
+            <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img
+                alt="Transistor"
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Duke_Energy_logo.svg"
+                width={158}
+                height={48}
+                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            />
+            <img
+                alt="Reform"
+                src="https://upload.wikimedia.org/wikipedia/commons/2/20/Bank_of_America_logo.svg"
+                width={158}
+                height={48}
+                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            />
+            <img
+                alt="Tuple"
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Wells_Fargo_Bank.svg"
+                width={158}
+                height={48}
+                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+            />
+            <img
+                alt="SavvyCal"
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Lowes_Companies_Logo.svg"
+                width={158}
+                height={48}
+                className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+            />
+            <img
+                alt="Statamic"
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Truist_Financial_logo.svg"
+                width={158}
+                height={48}
+                className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+            />
             </div>
-        </Fragment>
+        </div>
+        </div>
     )
 }
-
-export default stat
