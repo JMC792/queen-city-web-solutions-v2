@@ -8,11 +8,6 @@ import Form3 from "@components/forms/Form3.js";
 import layout from "public/locales/english/layout.json";
 import contact from "public/locales/english/contact.json";
 
-//SVG
-
-
-// Images
-
 export const metadata = {
   title: "Contact Us",
   description: [contact.metadata.description],
