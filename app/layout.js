@@ -15,9 +15,9 @@ import email from "public/icons/email.svg"
 export const metadata = {
   title: {
     //template: "%s | " + [layout.title],
-    default: 'Valentin Law',
+    default: 'Queen City Web Solutions',
   },
-  description: "Valentin Law, based in Atlanta, GA, specializes in immigration law, offering services from asylum applications to naturalization. Our experienced team is dedicated to guiding individuals and families through the complexities of U.S. immigration, ensuring personalized support and effective advocacy.",
+  description: "Queen City Web Solutions is a web development company that specializes in creating custom websites for small businesses and entrepreneurs.",
   appliationName: "Valentin Law",
   creator: "Mauricio Chavez",
   publisher: "Mauricio Chavez",

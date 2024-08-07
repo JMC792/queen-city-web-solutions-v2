@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Image from "next/image"
+import logo from "../../public/icons/logo.svg"
 
 /*
   This example requires some changes to your config:
@@ -22,10 +24,10 @@ const navigation = {
     { name: 'Insights', href: '#' },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    { name: 'Phone', href: '#' },
+    { name: 'Teams', href: '#' },
+    { name: 'Email', href: '#' },
+    { name: 'Fax', href: '#' },
   ],
   company: [
     { name: 'Home', href: '/' },
@@ -111,10 +113,11 @@ export default function Example() {
       </h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <img
+          <Image
             alt="Company name"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-            className="h-7"
+            width = {100}
+            height = {100}
+            src={logo}
           />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
