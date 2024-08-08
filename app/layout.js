@@ -39,6 +39,7 @@ export default function RootLayout({
           link3 = {layout.sitemap.portfolio} //Portfolio
           link4 = {layout.sitemap.contact} //Contact
           link5 = {layout.sitemap.service} //Service
+          link6 = {layout.sitemap.blog} //Blog
           phoneNumber = {layout.number}
           logo = {logo}
         />

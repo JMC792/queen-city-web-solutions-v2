@@ -4,14 +4,15 @@
     "applicationName": "Vapor X Crawlspaces",
     "creator": "Jesus Chavez",
     "publisher": "Jesus Chavez",
-    "number": "(404)-919-0443",
-    "email": "julio@valentinlaw.us",
-    "address": "1201 W Peachtree St NW suite 2300",
-    "city": "Atlanta, GA 30309",
+    "number": "(980)-392-7215",
+    "email": "info@queencitywebsolutions.com",
+    "address": "1422 S Tryon St",
+    "city": "Charlotte, NC 28203",
     "sitemap": {
         "home": "home",
         "about": "about",
         "portfolio": "portfolio",
+        "blog": "blog",
         "contact": "contact",
         "service": "service"
         }

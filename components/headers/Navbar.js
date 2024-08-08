@@ -100,11 +100,20 @@ function Navbar(props) {
                                     </Link>
                                 </div>
 
+                                {/* Blog */}
+                                <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                    <Link href= {"/" + [props.link6]}>
+                                        <div className="capitalize">
+                                            {props.link6}
+                                        </div>
+                                    </Link>
+                                </div>
+
                             </div>
 
                             {/* Contact Us */}
                             <div className="hidden lg:grid">
-                                <div className='hover:text-yellow-600 transition-colors delay-100'>
+                                {/* <div className='hover:text-yellow-600 transition-colors delay-100'>
                                     <a href={"tel: " + [props.phoneNumber]}>
                                         <div className='flex flex-col items-center'>
                                             <p>{navbar.call.title}</p>
@@ -112,13 +121,13 @@ function Navbar(props) {
                                         </div>
                                         
                                     </a>
-                                </div>
+                                </div> */}
                                     
                             </div>
 
                             {/* Off-canvas Menu */}
                             <div className="flex lg:hidden">
-                                <div onClick={showOffcanvas} id="toggle-button">
+                                <div onClick={() => setOffcanvas(true)} id="toggle-button">
                                     <Bars3Icon className="h-6 w-6 text-primary" />
                                 </div>
                             </div>
@@ -137,7 +146,7 @@ function Navbar(props) {
                     props.link4,
                     props.link5,
                 ]}
-                showOffcanvas={showOffcanvas} 
+                showOffcanvas={() => setOffcanvas(false)} 
                 offcanvas={offcanvas} 
                 logo={props.logo}
             />

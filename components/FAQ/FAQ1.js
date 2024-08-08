@@ -31,7 +31,7 @@ export default function Example() {
             <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
             <p className="mt-6 text-base leading-7 text-gray-600">
                 Have a different question and can’t find the answer you’re looking for? Reach out to our support team by{' '}
-                <Link href="/about" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                <Link href="/contact" className="font-semibold text-indigo-600 hover:text-indigo-500">
                 sending us an email
                 </Link>{' '}
                 and we’ll get back to you as soon as we can.
