@@ -145,12 +145,13 @@ export default function Example() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-6xl">
-                    We’re changing the way people connect.
+                    Get to know Us.
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-400 sm:max-w-md lg:max-w-none">
-                    Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in quis cupidatat mollit aute velit. Et
-                    labore commodo nulla aliqua proident mollit ullamco exercitation tempor. Sint aliqua anim nulla sunt
-                    mollit id pariatur in voluptate cillum.
+                  At Queen City IT Solutions, we are committed to delivering high-quality IT services tailored to your business needs. 
+                  Our team prides itself on offering reliable, efficient, and customized solutions. 
+                  With a focus on precision and care, we handle every project with the expertise required to ensure your success. 
+                  Trust us to be your dedicated IT partner, guiding you through every challenge with professionalism and attention to detail.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link

@@ -8,6 +8,6 @@ export default function robots() {
         '/post',
       ],
     },
-    sitemap: 'https://www.vaporxcrawlspaces.com/sitemap.xml',
+    sitemap: 'https://www.queencitywebsolutions.com/sitemap.xml',
   }
 }

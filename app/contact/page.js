@@ -20,7 +20,11 @@ export default async function Page() {
 
   return (
     <Fragment>
-      <Header/>
+      <Header
+        image = {"https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"}
+        title = {"Get in Touch"}
+        text = {"Ready to enhance your IT infrastructure? Reach out to Queen City IT Solutions today. Whether you have questions, need support, or want to schedule a consultation, our team is here to assist you. Contact us to get started on your path to seamless IT solutions."}
+      />
       <FAQ/>
       <Form3
         title = {contact.form.title}

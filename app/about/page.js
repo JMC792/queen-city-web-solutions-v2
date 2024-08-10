@@ -6,6 +6,7 @@ import language from "public/locales/english/homepage.json";
 // Components
 import Hero2 from "../../components/hero/Hero4.js";
 import ProductScreenshot from "@components/features/ProductScreenshot.js";
+import CTA from "@components/CTA/CTA1.js";
 
 //Images
 import image4 from "/public/images/homepage/photo1.jpeg";
@@ -32,14 +33,7 @@ export default function Page() {
         paragraph={language.index.about.paragraph.one}
         image={image4}
       />
-      {/* <TwoColumnDark
-        heading={language.index.mission.heading}
-        title={language.index.mission.title}
-        paragraph1={language.index.mission.paragraph1}
-        paragraph2={language.index.mission.paragraph2}
-        paragraph3={language.index.mission.paragraph3}
-        paragraph4={language.index.mission.paragraph4}
-      /> */}
+      <CTA/>
     </Fragment>
   );
 }

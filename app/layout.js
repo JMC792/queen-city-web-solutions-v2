@@ -18,7 +18,7 @@ export const metadata = {
     default: 'Queen City Web Solutions',
   },
   description: "Queen City Web Solutions is a web development company that specializes in creating custom websites for small businesses and entrepreneurs.",
-  appliationName: "Valentin Law",
+  appliationName: "Queen City Web Solutions",
   creator: "Mauricio Chavez",
   publisher: "Mauricio Chavez",
 };
