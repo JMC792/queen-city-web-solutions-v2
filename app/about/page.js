@@ -4,7 +4,7 @@ import about from "public/locales/english/about.json";
 import language from "public/locales/english/homepage.json";
 
 // Components
-import Hero2 from "../../components/hero/Hero2.js";
+import Hero2 from "../../components/hero/Hero4.js";
 import ProductScreenshot from "@components/features/ProductScreenshot.js";
 
 //Images

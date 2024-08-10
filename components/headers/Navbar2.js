@@ -5,6 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import logo from '/public/icons/logo.svg'
+import Link from 'next/link'
 
 const navigation = [
 { name: 'About', href: '/about' },
@@ -39,9 +40,9 @@ export default function Navbar2() {
 
                     <div className="hidden lg:flex lg:gap-x-12">
                         {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-200">
+                        <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-200">
                             {item.name}
-                        </a>
+                        </Link>
                         ))}
                     </div>
 

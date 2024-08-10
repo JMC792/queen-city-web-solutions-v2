@@ -2,6 +2,7 @@ import {Fragment} from "react";
 
 //Components
 import Hero2 from "@components/hero/Hero2.js";
+import Header2 from "@components/headers/Header2.js";
 import OffsetList from "@components/features/OffsetList.js";
 
 //Locales
@@ -20,11 +21,7 @@ export const metadata = {
 export default function Page() {
   return (
         <Fragment>
-            <Hero2 
-              heroTitle={service.hero.title} 
-              heroSubtitle={service.hero.subtitle}
-              background={"bg-back-about"}
-            />
+            <Header2/>
             <OffsetList
               heading={service.section1.heading}
               title={service.section1.title}

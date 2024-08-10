@@ -20,23 +20,22 @@ function Navbar(props) {
 
     //Off Canvas (mobile) menu hook
     const [offcanvas, setOffcanvas] = useState(false);
-    const showOffcanvas = () => setOffcanvas(!offcanvas);
 
 
     // Adds Sticky to Navbar
-    useEffect(() => {
-        window.addEventListener('scroll', isSticky);
-        return () => {
-            window.removeEventListener('scroll', isSticky);
-        };
-    });
-    const isSticky = (e) => {
-        const navbar = document.querySelector('.header-selection');
-        const scrollTop = window.scrollY;
-        scrollTop >= 250
-            ? navbar.classList.add('is-sticky')
-            : navbar.classList.remove('is-sticky');
-    };
+    // useEffect(() => {
+    //     window.addEventListener('scroll', isSticky);
+    //     return () => {
+    //         window.removeEventListener('scroll', isSticky);
+    //     };
+    // });
+    // const isSticky = (e) => {
+    //     const navbar = document.querySelector('.header-selection');
+    //     const scrollTop = window.scrollY;
+    //     scrollTop >= 250
+    //         ? navbar.classList.add('is-sticky')
+    //         : navbar.classList.remove('is-sticky');
+    // };
 
     return(
         <Fragment>
@@ -56,7 +55,7 @@ function Navbar(props) {
                             <div className="hidden lg:flex gap-x-6">
 
                                 {/* Home */}
-                                <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-sm font-medium hover:text-yellow-600 transition-colors delay-100">
                                     <Link href= {"/" }>
                                         <div className="capitalize">
                                             {props.link1}
@@ -65,7 +64,7 @@ function Navbar(props) {
                                 </div>
 
                                 {/* About */}
-                                <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-sm font-medium hover:text-yellow-600 transition-colors delay-100">
                                     <Link href= {"/" + [props.link2]}>
                                         <div className="capitalize">
                                             {props.link2}
@@ -74,7 +73,7 @@ function Navbar(props) {
                                 </div>
 
                                 {/* Portfolio */}
-                                {/* <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                {/* <div className="text-sm font-medium hover:text-yellow-600 transition-colors delay-100">
                                     <Link href= {"/" + [props.link3]}>
                                         <div className="capitalize">
                                             {props.link3}
@@ -83,7 +82,7 @@ function Navbar(props) {
                                 </div> */}
 
                                 {/* Contact */}
-                                <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-sm font-medium hover:text-yellow-600 transition-colors delay-100">
                                     <Link href= {"/" + [props.link4]}>
                                         <div className="capitalize">
                                             {props.link4}
@@ -92,7 +91,7 @@ function Navbar(props) {
                                 </div>
 
                                 {/* Service */}
-                                <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-sm font-medium hover:text-yellow-600 transition-colors delay-100">
                                     <Link href= {"/" + [props.link5]}>
                                         <div className="capitalize">
                                             {props.link5}
@@ -101,7 +100,7 @@ function Navbar(props) {
                                 </div>
 
                                 {/* Blog */}
-                                <div className="text-[16px] font-medium hover:text-yellow-600 transition-colors delay-100">
+                                <div className="text-sm font-medium hover:text-yellow-600 transition-colors delay-100">
                                     <Link href= {"/" + [props.link6]}>
                                         <div className="capitalize">
                                             {props.link6}
