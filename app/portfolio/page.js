@@ -39,10 +39,10 @@ export default function Page(){
                 heroSubtitle={portfolio.hero.subtitle}
                 background={"bg-back-about"}
             />
-            <List
+            {/* <List
                 images={[image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16]}
                 blogData={data}
-            />
+            /> */}
         </Fragment>
     )
 }
