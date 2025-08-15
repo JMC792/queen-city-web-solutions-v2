@@ -1,8 +1,13 @@
 import { Fragment } from 'react';
+import Header1 from '@components/headers/Header1';
 
 export default async function Page() {
     return (
         <Fragment>
+            <Header1 
+            title="Terms of Use"
+            text="Your use of our site is governed by these terms."
+            />
             <div class="bg-gray-100 text-gray-800">
                 <div class="container mx-auto pt-52 pb-20">
                     <h1 class="text-4xl font-bold text-center mb-8">Terms of Use</h1>
@@ -37,7 +42,7 @@ export default async function Page() {
                     <p class="mb-4">These Terms are subject to and shall be interpreted in accordance with the laws of the State of Delaware, without regard to its conflicts of laws provisions. By using the Site, you waive any claims that may arise under the laws of other states, countries, territories or jurisdictions, and agree that any dispute, legal action or proceeding between you and Queen City Web Solutions that concerns or relates in any way to your access and use of the Site, Site Content, Submissions, postings or other material or any information available via the Site shall be brought exclusively in federal or state court, as applicable, in the State of Delaware. Any proceedings to resolve or litigate any dispute in any forum will be conducted solely on an individual basis. Neither you nor Queen City Web Solutions will seek to have any dispute heard as a class action or in any other proceeding in which either party acts or proposes to act in a representative capacity.</p>
 
                     <h2 class="text-2xl font-semibold mb-4">Contacting Queen City Web Solutions</h2>
-                    <p class="mb-4">Any questions, claims or issues related to the Site, the Site Content, Submissions or your use of the foregoing should be addressed to <a href="mailto:webmaster@queencitywebsolutions.com" class="text-blue-500">webmaster@queencitywebsolutions.com</a>.</p>
+                    <p class="mb-4">Any questions, claims or issues related to the Site, the Site Content, Submissions or your use of the foregoing should be addressed to <a href="mailto:contact@queencitywebsolutions.com" class="text-blue-500">contact@queencitywebsolutions.com</a>.</p>
                 </div>
             </div>
         </Fragment>

@@ -37,9 +37,9 @@ const navigation = {
     { name: 'Blog', href: '/blog' },
   ],
   legal: [
-    { name: 'Privacy', href: '/privacy' },
-    { name: 'Terms', href: '/terms' }, 
-    { name: 'EOS', href: '/eos' },
+    { name: 'Privacy', href: '/tos/privacy' },
+    { name: 'Terms', href: '/tos/terms' },
+    { name: 'EOS', href: '/tos/eos' },
   ],
   social: [
     {

@@ -1,8 +1,13 @@
 import { Fragment } from 'react';
+import Header1 from '@components/headers/Header1';
 
 export default async function Page() {
     return (
         <Fragment>
+            <Header1 
+            title="Privacy Policy"
+            text="Your privacy is important to us."
+            />
             <div class="bg-gray-100 text-gray-800">
                 <div class="container mx-auto pt-52 pb-20">
                     <h1 class="text-4xl font-bold text-center mb-8">Privacy Policy</h1>
