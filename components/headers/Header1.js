@@ -1,9 +1,22 @@
 import { Fragment } from "react";
+import Image from "next/image";
+import Navbar from "@components/headers/Navbar.js";
+import layout from "public/locales/english/layout.json";
+import logo from "public/icons/logo.svg"
 
 export default async function Header1(props){
 
     return(
         <Fragment>
+            <Navbar
+          link2 = {layout.sitemap.about} //About
+          link3 = {layout.sitemap.link3} //Portfolio
+          link4 = {layout.sitemap.contact} //Contact
+          link5 = {layout.sitemap.service} //Service
+          link6 = {layout.sitemap.blog} //Blog
+          phoneNumber = {layout.number}
+          logo = {logo}
+        />
             <div className="relative bg-indigo-800">
                 <div className="absolute inset-0">
                     <img
