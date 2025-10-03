@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import {Fragment} from "react";
 import Image from "next/image";
@@ -5,6 +7,7 @@ import Navbar from "@components/headers/Navbar.js";
 import layout from "public/locales/english/layout.json";
 import logo from "public/icons/logo.svg"
 import { XMarkIcon } from '@heroicons/react/20/solid'  
+import { motion } from "framer-motion";
 
 
 export default function Hero({title,subtitle,button}) {
@@ -34,7 +37,7 @@ export default function Hero({title,subtitle,button}) {
                     />
                     
                     {/* Announcement Bar */}
-                    <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+                    {/* <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
                         <div
                             aria-hidden="true"
                             className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
@@ -58,15 +61,15 @@ export default function Hero({title,subtitle,button}) {
                             }}
                             className="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Text and button */}
-                        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                        {/* <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
                             <p className="text-sm/6 text-gray-900">
-                                {/* <strong className="font-semibold">GeneriCon 2023</strong> */}
-                                {/* <svg viewBox="0 0 2 2" aria-hidden="true" className="mx-2 inline size-0.5 fill-current">
+                                <strong className="font-semibold">GeneriCon 2023</strong>
+                                <svg viewBox="0 0 2 2" aria-hidden="true" className="mx-2 inline size-0.5 fill-current">
                                     <circle r={1} cx={1} cy={1} />
-                                </svg> */}
+                                </svg>
                                 Rated 5★ by employers & candidates alike
                             </p>
                             <a
@@ -75,16 +78,16 @@ export default function Hero({title,subtitle,button}) {
                             >
                             Get Started <span aria-hidden="true">&rarr;</span>
                             </a>
-                        </div>
+                        </div> */}
                         
                         {/* close button */}
-                        <div className="flex flex-1 justify-end">
+                        {/* <div className="flex flex-1 justify-end">
                             <button type="button" className="-m-3 p-3 focus-visible:-outline-offset-4">
                             <span className="sr-only">Dismiss</span>
                             <XMarkIcon aria-hidden="true" className="size-5 text-gray-900" />
                             </button>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Navbar */}
                     <header className="relative">
@@ -102,7 +105,7 @@ export default function Hero({title,subtitle,button}) {
                     {/* Horizontal Margin and Padding */}
                     <div className="pt-[13rem] md:pt-[15rem] lg:pt-[16rem]">
                         {/* Vertical Margin and Padding */}
-                        <div className="mx-auto max-w-2xl animate-slide-from-opacity">
+                        <div className="mx-auto max-w-2xl">
 
                             {/* Announcement */}
                             {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -119,17 +122,29 @@ export default function Hero({title,subtitle,button}) {
                             <div className="text-center">
                                 
                                 {/* Paragraph */}
-                                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                                <motion.h1 
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                    className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
                                     {text.title}
-                                </h1>
+                                </motion.h1>
 
                                 {/* Subtitle */}
-                                <h2 className="mt-6 text-lg leading-8 text-gray-300">
+                                <motion.h2 
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.4 }}
+                                    className="mt-6 text-lg leading-8 text-gray-300">
                                     {text.subtitle}
-                                </h2>
+                                </motion.h2>
 
                                 {/* Buttons */}
-                                <div className="mt-10 flex items-center justify-center gap-x-6">
+                                <motion.div 
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.8 }}
+                                    className="mt-10 flex items-center justify-center gap-x-6">
                                     <Link href="/contact" className="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                         Get started
                                     </Link>
@@ -137,7 +152,7 @@ export default function Hero({title,subtitle,button}) {
                                     <Link href="/about" className="text-sm font-semibold leading-6 text-gray-300">
                                         Learn more <span aria-hidden="true">→</span>
                                     </Link>
-                                </div>
+                                </motion.div>
 
                             </div>
                             
