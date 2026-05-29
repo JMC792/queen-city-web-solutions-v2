@@ -42,40 +42,44 @@ export default function SideNav(props){
                         {/* List */}
                         <div>
                             
-                            {/* Link 1 */}
                             <Link href={"/"} >
                                 <div className='offcanvas-text'>
-                                    {props.links[0]}
+                                    Home
                                 </div>
                             </Link>
 
-                            {/* Link 2 */}
-                            <Link href={"/" + [props.links[1]]} >
-                                <div className='offcanvas-text'>
-                                    {props.links[1]}
-                                </div>
-                            </Link>
+                            {props.items.map((item) => {
+                                const hasChildren = Boolean(item.children?.length);
 
-                            {/* Link 3 */}
-                            {/* <Link href={"/" + [props.links[2]]} >
-                                <div className='offcanvas-text'>
-                                    {props.links[2]}
-                                </div>
-                            </Link> */}
+                                if (!hasChildren) {
+                                    return (
+                                        <Link key={item.name} href={item.href}>
+                                            <div className='offcanvas-text'>
+                                                {item.name}
+                                            </div>
+                                        </Link>
+                                    );
+                                }
 
-                            {/* Link 4 */}
-                            <Link href={"/" + [props.links[3]]} >
-                                <div className='offcanvas-text'>
-                                    {props.links[3]}
-                                </div>
-                            </Link>
-
-                            {/* Link 5 */}
-                            <Link href= {props.links[4]} >
-                                <div className='offcanvas-text'>
-                                    {props.links[4]}
-                                </div>
-                            </Link>
+                                return (
+                                    <div key={item.name} className="border-t">
+                                        <Link href={item.href}>
+                                            <div className='pb-2 pt-[15px] text-[15px] font-semibold uppercase leading-6'>
+                                                {item.name}
+                                            </div>
+                                        </Link>
+                                        <div className="pb-3 pl-4">
+                                            {item.children.map((child) => (
+                                                <Link key={child.name} href={child.href}>
+                                                    <div className="py-2 text-sm font-medium text-slate-600">
+                                                        {child.name}
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })}
                             
                         </div>
 

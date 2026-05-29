@@ -18,22 +18,35 @@ import logo from "../../public/icons/logo.svg"
 */
 const navigation = {
   solutions: [
-    { name: 'Banking', href: '#' },
-    { name: 'Energy', href: '#' },
-    { name: 'Health', href: '#' },
-    { name: 'Insights', href: '#' },
+    { name: 'Managed IT Services', href: '/service/managed-it-services' },
+    { name: 'Cybersecurity Services', href: '/service/cybersecurity-services' },
+    { name: 'Identity & Access Management', href: '/service/iam' },
+    { name: 'Network & Infrastructure', href: '/service/network-infrastructure' },
+    { name: 'Cloud Services', href: '/service/cloud-services' },
+    { name: 'Backup & Disaster Recovery', href: '/service/backup-disaster-recovery' },
+    { name: 'Help Desk Support', href: '/service/help-desk-support' },
+    { name: 'Web Design & Hosting', href: '/service/web-design' },
   ],
   support: [
-    { name: 'Phone', href: '#' },
-    { name: 'Teams', href: '#' },
-    { name: 'Email', href: '#' },
-    { name: 'Fax', href: '#' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Process', href: '/process' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  resources: [
+    { name: 'Resources', href: '/resources' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'SEO Guides', href: '/resources/seo-guides' },
+    { name: 'Security Tips', href: '/resources/security' },
+    { name: 'Free Audit', href: '/resources/free-audit' },
+    { name: 'Case Studies', href: '/resources/case-studies' },
+    { name: 'FAQ', href: '/faq' },
   ],
   company: [
     // { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
     { name: 'Services', href: '/service' },
+    { name: 'Work', href: '/portfolio' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
   ],
@@ -107,125 +120,265 @@ const navigation = {
   ],
 }
 
+const serviceDetailColumns = [
+  {
+    title: 'Managed IT Services',
+    href: '/service/managed-it-services',
+    items: [
+      '24/7 Monitoring',
+      'Remote Help Desk',
+      'Device Management',
+      'Patch Management',
+      'Software Installation',
+      'User Account Management',
+      'Vendor Management',
+      'IT Documentation',
+      'Asset Tracking',
+      'Preventative Maintenance',
+      'System Optimization',
+      'Remote Troubleshooting',
+      'Endpoint Management',
+      'Business IT Support',
+    ],
+  },
+  {
+    title: 'Cybersecurity Services',
+    href: '/service/cybersecurity-services',
+    items: [
+      'Endpoint Protection',
+      'Multi-Factor Authentication (MFA)',
+      'Identity & Access Management',
+      'SIEM Monitoring',
+      'Firewall Management',
+      'Vulnerability Scanning',
+      'Threat Detection',
+      'Email Security',
+      'Security Awareness Training',
+      'Zero Trust Security',
+      'Access Control Policies',
+      'Incident Response',
+      'Compliance Assistance',
+      'Ransomware Protection',
+      'Dark Web Monitoring',
+    ],
+  },
+  {
+    title: 'Network & Infrastructure',
+    href: '/service/network-infrastructure',
+    items: [
+      'Network Design',
+      'Firewall Configuration',
+      'VPN Setup',
+      'Wi-Fi Optimization',
+      'Server Management',
+      'Switch Configuration',
+      'Structured Cabling',
+      'Infrastructure Monitoring',
+      'Backup Systems',
+      'Disaster Recovery',
+      'Cloud Connectivity',
+      'Performance Optimization',
+      'Remote Site Connectivity',
+      'Network Security Hardening',
+    ],
+  },
+  {
+    title: 'Cloud Services',
+    href: '/service/cloud-services',
+    items: [
+      'Microsoft 365 Management',
+      'Google Workspace Administration',
+      'Cloud Migration',
+      'Azure Administration',
+      'AWS Support',
+      'SharePoint Setup',
+      'Microsoft Teams Configuration',
+      'Cloud Backups',
+      'Identity Synchronization',
+      'Remote Work Solutions',
+      'Cloud Security',
+      'Email Migration',
+      'Virtual Desktop Solutions',
+      'SaaS Management',
+    ],
+  },
+  {
+    title: 'Backup & Disaster Recovery',
+    href: '/service/backup-disaster-recovery',
+    items: [
+      'Automated Backups',
+      'Offsite Replication',
+      'Disaster Recovery Planning',
+      'Business Continuity Solutions',
+      'Recovery Testing',
+      'Ransomware Recovery',
+      'Image-Based Backups',
+      'File Restoration',
+      'Server Recovery',
+      'Cloud Backup Solutions',
+      'Backup Monitoring',
+      'Data Retention Policies',
+      'Rapid Recovery Solutions',
+    ],
+  },
+  {
+    title: 'Help Desk Support',
+    href: '/service/help-desk-support',
+    items: [
+      'Remote Technical Support',
+      'Ticketing System',
+      'Password Resets',
+      'Device Troubleshooting',
+      'Software Support',
+      'Printer Support',
+      'User Onboarding Assistance',
+      'Escalation Support',
+      'Email Support',
+      'Phone Support',
+      'Remote Sessions',
+      'User Training',
+      'Microsoft 365 Support',
+    ],
+  },
+  {
+    title: 'Web Design & Hosting',
+    href: '/service/web-design',
+    items: [
+      'Custom Website Design',
+      'SEO Optimization',
+      'Mobile Responsive Design',
+      'Web Hosting',
+      'SSL Security',
+      'Performance Optimization',
+      'Website Maintenance',
+      'Analytics Integration',
+      'Landing Page Development',
+      'CMS Integration',
+      'Speed Optimization',
+      'Security Hardening',
+      'E-Commerce Development',
+      'Ongoing Website Support',
+    ],
+  },
+]
+
 export default function Example() {
   return (
-    <footer aria-labelledby="footer-heading" className="bg-gray-900">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+    <footer className="bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+        <div className="border-t border-gray-900/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-6">
             <Image
-            alt="Company name"
-            width = {100}
-            height = {100}
-            src={logo}
-          />
-            <p className="text-balance tracking-wide text-sm/6 text-gray-300">
+              alt="Queen City Web Solutions"
+              width={100}
+              height={100}
+              src={logo}
+              className="brightness-0"
+            />
+            <p className="text-sm/6 text-gray-600">
               1422 S Tryon St <br/>
               Charlotte, NC 28203<br/>
             </p>
-            <p className="text-balance tracking-wide font-bold text-sm/6 text-gray-300">
+            <p className="text-sm/6 font-semibold text-gray-900">
               info@queencitywebsolutions.com
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Solutions</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Support</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
+          <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5 xl:col-span-2 xl:mt-0">
+            <div>
+              <h3 className="text-sm/6 font-semibold text-gray-950">Solutions</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.solutions.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm/6 font-semibold text-gray-950">Support</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.support.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm/6 font-semibold text-gray-950">Resources</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.resources.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm/6 font-semibold text-gray-950">Company</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.company.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm/6 font-semibold text-gray-950">Legal</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.legal.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm/6 text-gray-600 hover:text-gray-900">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12 pt-6">
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
+            {serviceDetailColumns.map((section) => (
+              <div key={section.title}>
+                <h3 className="text-sm/6 font-semibold text-gray-950">
+                  <Link href={section.href} className="hover:text-gray-700">
+                    {section.title}
+                  </Link>
+                </h3>
+                <ul role="list" className="mt-4 space-y-3">
+                  {section.items.map((item) => (
+                    <li key={item}>
+                      <Link href={section.href} className="text-xs/5 text-gray-600 hover:text-gray-900">
+                        {item}
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 lg:flex lg:items-center lg:justify-between">
-          <div>
-            <h3 className="text-sm font-semibold leading-6 text-white">Subscribe to our newsletter</h3>
-            <p className="mt-2 text-sm leading-6 text-gray-300">
-              The latest news, articles, and resources, sent to your inbox weekly.
-            </p>
-          </div>
-          <form className="mt-6 sm:flex sm:max-w-md lg:mt-0">
-            <label htmlFor="email-address" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email-address"
-              name="email-address"
-              type="email"
-              required
-              placeholder="Enter your email"
-              autoComplete="email"
-              className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:w-56 sm:text-sm sm:leading-6"
-            />
-            <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
-        </div>
-        <div className="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2">
+        <div className="mt-12 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
+          <div className="flex gap-x-6 md:order-2">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-500 hover:text-gray-400">
+              <a key={item.name} href={item.href} className="text-gray-600 hover:text-gray-800">
                 <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="h-6 w-6" />
+                <item.icon aria-hidden="true" className="size-6" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-            &copy; 2020 Queen City Web Solutions, LLC. All rights reserved.
+          <p className="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0">
+            &copy; 2026 Queen City Web Solutions, LLC. All rights reserved.
           </p>
         </div>
       </div>

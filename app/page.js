@@ -7,10 +7,7 @@ import OffsetList from "@components/features/OffsetList.js";
 import Stat from "@components/stats/Stat.js";
 import CTA from "@components/CTA/CTA1.js";
 import FAQ1 from "@components/FAQ/FAQ1.js";
-
-//Locales
-import layout from "public/locales/english/layout.json";
-import contact from "public/locales/english/contact.json";
+import Bento from "@components/bento/Bento1.js";
 
 //Locales
 import service from "public/locales/english/services.json";
@@ -47,7 +44,7 @@ export default function Page() {
               paragraph={language.index.about.paragraph.one}
               image={image4}
             />
-
+            {/* <Bento/> */}
             {/* Testimonial */}
             <SimpleCentered
               name={language.index.testimonials.name}

@@ -1,50 +1,166 @@
-import { Fragment } from 'react';
+import Link from 'next/link';
 import Header1 from '@components/headers/Header1';
 
+const quickNotes = [
+  'Use of the website means you agree to these terms.',
+  'Queen City Web Solutions owns or licenses the site content.',
+  'Third-party links are provided for convenience and have their own policies.',
+  'Questions about these terms can be sent to our team.',
+];
+
+const termsSections = [
+  {
+    title: 'Acceptance of Terms',
+    content: [
+      'Thank you for visiting www.queencitywebsolutions.com (the “Site”), provided to you by Queen City Web Solutions (“Queen City Web Solutions”). Use of the Site is governed by these terms of use (the “Terms”), which include the Site Privacy Policy (the “Policy”). By accessing and interacting with the Site, you agree to be bound by these Terms and, as applicable, the Policy.',
+      'You should read these Terms and the Policy carefully prior to using the Site. Queen City Web Solutions may modify these Terms and/or the Policy at any time, and any such modification will become effective immediately upon Queen City Web Solutions posting the modified Terms or Policy to the Site. Queen City Web Solutions encourages you to visit the Terms and Policy pages periodically to check for updates.',
+    ],
+  },
+  {
+    title: 'Ownership',
+    content: [
+      'The Site and all material contained on or downloadable through the Site, including text, images, documents, graphics, photos, video, audio, and other multimedia content (the “Site Content”), and all intellectual property rights embodied in the Site Content, are the exclusive property of Queen City Web Solutions or its licensors.',
+      'Queen City Web Solutions grants you a license to print out single copies of materials and documents available through the Site for your own personal or non-commercial use. You may not modify, excerpt from, edit, reproduce, publish, or distribute Site Content without the prior written permission of Queen City Web Solutions, except for the limited personal or non-commercial use described above.',
+      'The posting of Site Content to the Site by Queen City Web Solutions does not waive any rights of Queen City Web Solutions or its licensors in the Site Content, or transfer to you or anyone else any rights in or to the Site Content. No right or license is granted to use any trademarks or service marks of Queen City Web Solutions.',
+    ],
+  },
+  {
+    title: 'Links to Third-Party Websites',
+    content: [
+      'The Site may contain links to third-party websites. These links are provided solely for your information and convenience. Queen City Web Solutions does not control the content or operation of third-party sites and makes no representation, warranty, or endorsement with respect to the products or services depicted or offered on such sites.',
+      'Your use of third-party sites will be subject to the terms of use, privacy policy, and other policies established by those operators. Queen City Web Solutions is not responsible for third-party websites or their content or security.',
+    ],
+  },
+  {
+    title: 'Disclaimer',
+    content: [
+      'THE SITE AND THE SITE CONTENT ARE PROVIDED AS-IS AND WITH ALL FAULTS. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, QUEEN CITY WEB SOLUTIONS DISCLAIMS ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, OR IMPLIED WARRANTIES ARISING FROM A COURSE OF DEALING, USAGE, OR TRADE PRACTICE.',
+      'QUEEN CITY WEB SOLUTIONS MAKES NO WARRANTY THAT THE SITE IS SECURE, WILL OPERATE WITHOUT ERROR, OR BE AVAILABLE FOR YOUR USE, NOR THAT THE SITE CONTENT IS COMPLETE, ACCURATE, UP-TO-DATE, OR FREE FROM ERRORS. BY ACCESSING THE SITE, YOU ASSUME ALL RISK OF YOUR USE OF THE SITE AND ANY RELIANCE ON SITE CONTENT.',
+      'IF APPLICABLE LAW DOES NOT ALLOW THE EXCLUSION OF IMPLIED OR STATUTORY WARRANTIES TO APPLY TO YOU, THE ABOVE EXCLUSIONS WILL APPLY TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.',
+    ],
+  },
+  {
+    title: 'Limitation of Liability',
+    content: [
+      'IN NO EVENT SHALL QUEEN CITY WEB SOLUTIONS, ITS AFFILIATES, DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, OR ANY OTHER PARTY PURPORTING TO CLAIM THROUGH ANY OF THE FOREGOING, BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, EXEMPLARY, OR CONSEQUENTIAL DAMAGES OF ANY TYPE WHATSOEVER ARISING OR ALLEGED TO HAVE ARISEN FROM THE USE OF THE SITE OR SITE CONTENT.',
+      'This includes, without limitation, loss of business, revenue, profits, use, data, goodwill, or other economic advantage, however such damages arise, whether for breach of contract or in tort, including negligence, even if Queen City Web Solutions is expressly advised of the possibility of such damages.',
+    ],
+  },
+  {
+    title: 'Indemnification',
+    content: [
+      'You agree to indemnify, defend, and hold harmless Queen City Web Solutions, its subsidiaries, affiliates, joint ventures, business partners, licensors, officers, directors, employees, agents, and successors in interest from and against any claims, losses, liabilities, and expenses, including attorneys’ fees, arising from your use of the Site or Site Content, breach of these Terms or the Policy, and/or any representations or warranties made by you with respect to Submissions made by you or on your behalf through the Site.',
+    ],
+  },
+  {
+    title: 'Your Conduct on the Site',
+    content: [
+      'You agree that you shall not submit, post, introduce, distribute, upload, or transmit to or through the Site material that is illegal, indecent, obscene, libelous, defamatory, disparaging, false, misleading, unsolicited advertising, infringing, malicious, or impersonating another person or source.',
+      'You further agree not to engage in any activity on or in connection with the Site meant to compromise or circumvent Site security, derive passwords of third parties, introduce scraping or monitoring code, or unduly stress the Site, including mass downloading of Site Content or facilitating denial of service attacks.',
+      'Any breach of these provisions, or any other unauthorized or prohibited use of the Site or Site Content, may subject you to civil liability or criminal prosecution under applicable laws.',
+    ],
+  },
+  {
+    title: 'Site Submissions',
+    content: [
+      'The Site may provide opportunities for you to submit information, inquiries, feedback, or other materials to Queen City Web Solutions (each, a “Submission”). All Submissions, whether submitted via email, web form, or otherwise, shall be deemed non-confidential by Queen City Web Solutions.',
+      'By delivering a Submission to the Site, you grant Queen City Web Solutions a fully paid-up, non-exclusive, perpetual, worldwide, and royalty-free license to use such Submission as Queen City Web Solutions deems appropriate, subject to any limits on use set forth in the Policy.',
+      'Queen City Web Solutions reserves the right at any time and without notice to reject, refuse to accept, post, delete, or remove any Submission. You represent and warrant that you have all necessary rights in and to all Submissions and postings made by you or on your behalf.',
+      'If you are under the age of 13, you may not register with or otherwise make Submissions to the Site. If you are over the age of 13 but under 18, Submissions may be submitted on your behalf only with the prior permission of your parent or legal guardian.',
+    ],
+  },
+  {
+    title: 'Choice of Law',
+    content: [
+      'These Terms are subject to and shall be interpreted in accordance with the laws of the State of Delaware, without regard to its conflicts of laws provisions. By using the Site, you waive any claims that may arise under the laws of other states, countries, territories, or jurisdictions.',
+      'You agree that any dispute, legal action, or proceeding between you and Queen City Web Solutions that concerns or relates to your access and use of the Site, Site Content, Submissions, postings, or other material or information available via the Site shall be brought exclusively in federal or state court, as applicable, in the State of Delaware.',
+      'Any proceedings to resolve or litigate any dispute in any forum will be conducted solely on an individual basis. Neither you nor Queen City Web Solutions will seek to have any dispute heard as a class action or in any other proceeding in which either party acts or proposes to act in a representative capacity.',
+    ],
+  },
+];
+
+export const metadata = {
+  title: 'Terms of Use',
+  description: 'Terms of use for Queen City Web Solutions.',
+};
+
 export default async function Page() {
-    return (
-        <Fragment>
-            <Header1 
-            title="Terms of Use"
-            text="Your use of our site is governed by these terms."
-            />
-            <div class="bg-gray-100 text-gray-800">
-                <div class="container mx-auto pt-52 pb-20">
-                    <h1 class="text-4xl font-bold text-center mb-8">Terms of Use</h1>
-                    <p class="mb-4">Thank you for visiting www.queencitywebsolutions.com (the “Site”), provided to you by Queen City Web Solutions (“Queen City Web Solutions”). Use of the Site is governed by these terms of use (the “Terms”), which includes the Site Privacy Policy (the “Policy”). By accessing and interacting with the Site, you agree to be bound by these Terms and, as applicable, the Policy. You should read these Terms and the Policy carefully prior to using the Site. Queen City Web Solutions may modify these Terms and/or the Policy at any time, and any such modification(s) will become effective immediately upon Queen City Web Solutions posting the modified Terms or Policy to the Site. Queen City Web Solutions encourages you to visit the Terms and Policy pages periodically to check for updates.</p>
+  return (
+    <main className="bg-slate-50">
+      <Header1
+        image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1920&q=80"
+        title="Terms of Use"
+        text="The terms that govern your use of the Queen City Web Solutions website."
+      />
 
-                    <h2 class="text-2xl font-semibold mb-4">Ownership</h2>
-                    <p class="mb-4">The Site and all material contained on or downloadable through the Site, including, but not limited to, text, images, documents, graphics, photos, video, audio and other multimedia content (the “Site Content”), and all intellectual property rights embodied in the Site Content, are the exclusive property of Queen City Web Solutions or its licensors. Queen City Web Solutions grants you a license to print out single copies of materials and documents available through the Site for your own personal or non-commercial use, but you may not modify (including, by way of example and not limitation, by removing or obscuring any copyright, proprietary right or trademark notice or legend from any Site Content), excerpt from or edit such Site Content, or further reproduce or distribute such Site Content. Except for the limited reproduction rights granted to you in the immediately preceding sentence, you may not download, copy or otherwise reproduce, publish, excerpt from, modify, edit or distribute the Site Content without the prior, written permission of Queen City Web Solutions.</p>
-                    <p class="mb-4">The posting of Site Content to the Site by Queen City Web Solutions does not constitute a waiver of any rights of Queen City Web Solutions or its licensors in the Site Content, or transfer to you or anyone else any rights in or to the Site Content. Without limiting the foregoing, no right or license is granted to you to use any trademarks or service marks of Queen City Web Solutions.</p>
+      <section className="mx-auto max-w-5xl px-6 py-20 lg:px-8">
+        <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+          <div className="border-b border-slate-200 pb-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-blue-500">
+              Legal
+            </p>
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+              Terms of Use
+            </h1>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+              These terms explain how visitors may use the Queen City Web Solutions website, how our content is protected, and what responsibilities apply when interacting with the site.
+            </p>
+            <p className="mt-4 text-sm text-slate-500">Last updated: May 2026</p>
+          </div>
 
-                    <h2 class="text-2xl font-semibold mb-4">Links to Third Party Websites</h2>
-                    <p class="mb-4">The Site may contain links to third party websites. These links are provided to you solely for your information and convenience. Queen City Web Solutions does not control the content or operation of third party sites, and makes no representation, warranty or endorsement with respect to the products or services depicted or offered on such sites. Your use of such third party sites will be subject to the terms of use, privacy policy and other policies as the operators of the sites have established. Queen City Web Solutions is not responsible for these third party websites or their content or security.</p>
+          <section className="mt-10 rounded-lg bg-slate-50 p-6">
+            <h2 className="text-lg font-semibold text-slate-950">At a Glance</h2>
+            <ul className="mt-4 grid gap-3 text-sm leading-6 text-slate-700 sm:grid-cols-2">
+              {quickNotes.map((note) => (
+                <li key={note} className="flex gap-x-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-blue-500" />
+                  <span>{note}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-                    <h2 class="text-2xl font-semibold mb-4">Disclaimer</h2>
-                    <p class="mb-4">THE SITE AND THE SITE CONTENT ARE PROVIDED AS-IS AND WITH ALL FAULTS. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, QUEEN CITY WEB SOLUTIONS DISCLAIMS ALL EXPRESS OR IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, OR IMPLIED WARRANTIES ARISING FROM A COURSE OF DEALING, USAGE OR TRADE PRACTICE. QUEEN CITY WEB SOLUTIONS MAKES NO WARRANTY THAT THE SITE IS SECURE, WILL OPERATE WITHOUT ERROR OR BE AVAILABLE FOR YOUR USE, NOR THAT THE SITE CONTENT IS COMPLETE, ACCURATE, UP-TO-DATE OR FREE FROM ERRORS. WITHOUT LIMITING THE BREADTH OF THE FOREGOING, YOU UNDERSTAND AND AGREE THAT BY ACCESSING THE SITE, YOU ARE ASSUMING ALL RISK OF YOUR USE OF THE SITE, AND THAT TO THE EXTENT THAT YOU USE OR RELY ON THE SITE OR SITE CONTENT, YOU HAVE INDEPENDENTLY DETERMINED TO DO SO, UNDERSTANDING AND ASSUMING ALL RISKS ASSOCIATED WITH SUCH USE OR RELIANCE. WITHOUT LIMITING THE FOREGOING, YOU ACKNOWLEDGE AND AGREE THAT YOU AND YOU ALONE SHALL BE RESPONSIBLE FOR ANY DAMAGE TO OR FAILURE OF YOUR COMPUTER, NETWORK OR TELECOMMUNICATIONS SYSTEMS ARISING AS A CONSEQUENCE OF YOUR USE OF THE SITE OR SITE CONTENT. IF APPLICABLE LAW DOES NOT ALLOW THE EXCLUSION IMPLIED OR STATUTORY WARRANTIES TO APPLY TO YOU, THE ABOVE EXCLUSIONS WILL APPLY TO YOU TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.</p>
-
-                    <h2 class="text-2xl font-semibold mb-4">Limitation of Liability</h2>
-                    <p class="mb-4">IN NO EVENT SHALL QUEEN CITY WEB SOLUTIONS, ITS AFFILIATES, DIRECTORS, OFFICERS, EMPLOYEES OR AGENTS, OR ANY OTHER PARTY PURPORTING TO CLAIM THROUGH ANY OF THE FOREGOING, BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, EXEMPLARY OR CONSEQUENTIAL DAMAGES OF ANY TYPE WHATSOEVER ARISING OR ALLEGED TO HAVE ARISEN FROM THE USE OF THE SITE OR SITE CONTENT, INCLUDING WITHOUT LIMITATION, LOSS OF BUSINESS, REVENUE, PROFITS, USE, DATA, GOODWILL OR OTHER ECONOMIC ADVANTAGE, HOWEVER SUCH DAMAGES ARISE, WHETHER FOR BREACH OF CONTRACT OR IN TORT (INCLUDING WITHOUT LIMITATION, NEGLIGENCE), EVEN IF QUEEN CITY WEB SOLUTIONS IS EXPRESSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
-
-                    <h2 class="text-2xl font-semibold mb-4">Indemnification</h2>
-                    <p class="mb-4">You agree to indemnify, defend and hold harmless, Queen City Web Solutions, its subsidiaries, affiliates, joint ventures, business partners, licensors, officers, directors, employees, agents, and successors in interest from and against any claims, losses, liabilities and expenses (including attorneys’ fees) arising from your use of the Site or Site Content, the breach of these Terms or the Policy, and/or any representations or warranties made by you with respect to Submissions (as defined below) made by your or on your behalf to or through the Site.</p>
-
-                    <h2 class="text-2xl font-semibold mb-4">Your Conduct on the Site</h2>
-                    <p class="mb-4">You agree that you shall not submit, post, introduce, distribute, upload or transmit to or through the Site: (a) material that is illegal, indecent, obscene, libelous, defamatory, disparaging, false or misleading; (b) unsolicited advertising, promotional material, or other forms of solicitation; (c) material that would infringe or violate the intellectual property, privacy or other rights of third parties; (d) any virus, worm, Trojan horse or other malicious, disabling or destructive code, or (e) a signature, avatar, screen name or other identifier that impersonates another person or otherwise misleads as to the source of a Submission or posting. You further agree that you shall not engage in any activity on or in connection with the Site (i) meant to compromise or circumvent Site security, including by way of example and not limitation, the use of any forged TCP/IP headers or header components, or to derive passwords of third parties in an attempt to gain unauthorized access to the Site or Queen City Web Solutions’ systems or data, (ii) that introduces any code or device meant to scrape or otherwise collect Site Content or related Site information, or monitor Site use, or (iii) that unduly stresses the Site, including by way of example and not limitation, mass downloading of Site Content or engaging in or facilitating denial of service attacks on the Site. Any breach of these provisions by you, or any other unauthorized or prohibited use of the Site or Site Content may subject you to civil liability or criminal prosecution under applicable laws.</p>
-
-                    <h2 class="text-2xl font-semibold mb-4">Site Submissions by You</h2>
-                    <p class="mb-4">The Site may provide opportunities for you to submit information, inquiries, feedback or other materials to Queen City Web Solutions (each, a “Submission”, and, collectively, “Submissions”). All Submissions, whether submitted via e-mail, web form or otherwise, irrespective of any legends included in or on such Submissions, shall be deemed non-confidential by Queen City Web Solutions. By delivering a Submission to the Site, you hereby grant to Queen City Web Solutions a fully paid-up, non-exclusive, perpetual, worldwide and royalty-free license to use such Submission as Queen City Web Solutions deems appropriate (and subject to any limits on use set forth in the Policy). You agree that Queen City Web Solutions may reproduce, transmit, distribute, adapt, perform, display and create derivative works from or based upon your Submission(s). Queen City Web Solutions reserves the right at any time and without notice to reject, refuse to accept or post, or delete or remove any Submission.</p>
-                    <p class="mb-4">In the event the Site permits active interchanges among participants – for example, forums, bulletin boards or other opportunities for parties to share information and ideas – you acknowledge and agree that, subject to the immediately following sentence, Queen City Web Solutions is under no obligation to, and may not prescreen, edit or otherwise review such postings before they are made available through the Site. Notwithstanding the foregoing, Queen City Web Solutions reserves the right at any time, for any reason and without notice, to remove or delete postings or to shut down any on-line forums or other exchanges facilitated through the Site. No such postings shall be deemed to reflect the opinions or views of Queen City Web Solutions, its owners, directors, officers or employees. To the fullest extent permitted by applicable law, Queen City Web Solutions shall in no event be liable or responsible to you or anyone else for any such postings.</p>
-                    <p class="mb-4">To the extent you submit any Submission, or participate in any Site-facilitated exchange, you hereby represent and warrant that you have all necessary rights in and to all Submissions and postings made by you or on your behalf. You further represent and warrant that any such Submissions or postings will not infringe, dilute or constitute a misappropriation of any third party’s copyright, patent, trademark, trade secret or other intellectual property right, violate any person’s right of privacy or publicity, or constitute obscene, indecent, unlawful, defamatory or libelous material.</p>
-                    <p class="mb-4">If you are under the age of 13, you may not register with or otherwise make Submissions to the Site. If you are over the age of 13, but under 18, Submissions may be submitted on your behalf only with the prior permission of your parent(s) or legal guardian(s). Any parent or legal guardian agreeing to these rules for the benefit of an individual between the ages of 13 and 18 acknowledges and agrees that he or she is fully responsible for such Submissions, and for any legal liability that may apply under these Terms or the Policy with respect to such Submission(s) or registration or use of the Site by a minor for whom permission has been granted by him or her.</p>
-
-                    <h2 class="text-2xl font-semibold mb-4">Choice of Law</h2>
-                    <p class="mb-4">These Terms are subject to and shall be interpreted in accordance with the laws of the State of Delaware, without regard to its conflicts of laws provisions. By using the Site, you waive any claims that may arise under the laws of other states, countries, territories or jurisdictions, and agree that any dispute, legal action or proceeding between you and Queen City Web Solutions that concerns or relates in any way to your access and use of the Site, Site Content, Submissions, postings or other material or any information available via the Site shall be brought exclusively in federal or state court, as applicable, in the State of Delaware. Any proceedings to resolve or litigate any dispute in any forum will be conducted solely on an individual basis. Neither you nor Queen City Web Solutions will seek to have any dispute heard as a class action or in any other proceeding in which either party acts or proposes to act in a representative capacity.</p>
-
-                    <h2 class="text-2xl font-semibold mb-4">Contacting Queen City Web Solutions</h2>
-                    <p class="mb-4">Any questions, claims or issues related to the Site, the Site Content, Submissions or your use of the foregoing should be addressed to <a href="mailto:contact@queencitywebsolutions.com" class="text-blue-500">contact@queencitywebsolutions.com</a>.</p>
+          <div className="mt-12 space-y-12">
+            {termsSections.map((section) => (
+              <section key={section.title}>
+                <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
+                  {section.title}
+                </h2>
+                <div className="mt-4 space-y-4">
+                  {section.content.map((paragraph) => (
+                    <p key={paragraph} className="text-base leading-8 text-slate-600">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
-            </div>
-        </Fragment>
-    );
+              </section>
+            ))}
+
+            <section className="rounded-lg bg-slate-950 p-8 text-white">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                Contacting Queen City Web Solutions
+              </h2>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                Any questions, claims, or issues related to the Site, Site Content, Submissions, or your use of the foregoing should be sent to Queen City Web Solutions.
+              </p>
+              <div className="mt-6 flex flex-col gap-3 text-sm font-semibold sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex justify-center rounded-md bg-blue-500 px-4 py-2.5 text-white transition hover:bg-blue-400"
+                >
+                  Contact Us
+                </Link>
+                <a
+                  href="mailto:contact@queencitywebsolutions.com"
+                  className="inline-flex justify-center rounded-md border border-white/20 px-4 py-2.5 text-white transition hover:bg-white/10"
+                >
+                  contact@queencitywebsolutions.com
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }

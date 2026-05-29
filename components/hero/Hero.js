@@ -9,7 +9,6 @@ import logo from "public/icons/logo.svg"
 import { XMarkIcon } from '@heroicons/react/20/solid'  
 import { motion } from "framer-motion";
 
-
 export default function Hero({title,subtitle,button}) {
 
     const text = {
