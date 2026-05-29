@@ -1,4 +1,8 @@
+'use client';
+
 import { CheckIcon } from '@heroicons/react/20/solid'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const features = [
     {
@@ -29,7 +33,12 @@ const features = [
 
 export default function Example(props) {
     return (
-    <div className="bg-white py-24 sm:py-32">
+    <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ amount: 0.3, once: true }}
+        className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <div>
@@ -56,6 +65,6 @@ export default function Example(props) {
             </dl>
         </div>
         </div>
-    </div>
+    </motion.div>
     )
 }

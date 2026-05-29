@@ -1,65 +1,172 @@
 {
-    "blog1":{
-        "slug": "post-1",
-        "type": "lifestyle",
-        "name": "Understanding the Difference: Static Generated Sites vs. WordPress",
-        "sentence": "Post Sentence 1",
-        "date": "09/11/2001",
-        "author": "Nicki Faircloth",
-        "content": {
-            "p1": "In the world of web development, creating a website can be achieved through various means. Two popular options are using static site generators and WordPress. Although they may seem similar at first glance, they have distinct differences that cater to different needs. Let's break down both options.",
-            "p2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-            "p3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-            "p4": "",
-            "p5": "",
-            "p6": ""
-        }
-    },
-    "blog2":{
-        "slug": "post-2",
-        "type": "Post Type 2",
-        "name": "Post Tile 2 ",
-        "sentence": "Post Sentence 2",
-        "date": "09/11/2001",
-        "author": "Nicki Faircloth",
-        "content": {
-            "p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "p2": "",
-            "p3": "",
-            "p4": "",
-            "p5": "",
-            "p6": ""
-        }
-    },
-    "blog3":{
-        "slug": "post-3",
-        "type": "lifestyle",
-        "name": "Post 3",
-        "sentence": "Post Sentence 3",
-        "date": "09/11/2001",
-        "author": "Nicki Faircloth",
-        "content": {
-            "p1": "",
-            "p2": "",
-            "p3": "",
-            "p4": "",
-            "p5": "",
-            "p6": ""
-        }
-    },
-    "blog4":{
-        "slug": "post-4",
-        "type": "lifestyle",
-        "name": "Post 4",
-        "sentence": "Post Sentence 4",
-        "date": "09/11/2001",
-        "content": {
-            "p1": "",
-            "p2": "",
-            "p3": "",
-            "p4": "",
-            "p5": "",
-            "p6": ""
-        }
+  "blog1": {
+    "slug": "post-1",
+    "type": "Cybersecurity",
+    "name": "Microsoft Defender Exploits: Why Security Tools Still Need Patching",
+    "sentence": "Attackers have been exploiting Microsoft Defender vulnerabilities, which is a reminder that endpoint security tools need the same patch discipline as every other critical system.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Microsoft Defender is supposed to protect Windows systems, but recent exploitation of Defender vulnerabilities shows why security products should never be treated as set-it-and-forget-it tools. When attackers can abuse the software that monitors endpoints, they may gain a better path to disable defenses, elevate privileges, or keep activity hidden long enough to cause damage.",
+      "p2": "The recent Defender issues included a local privilege escalation flaw and a denial-of-service condition. In plain terms, one type of bug can help an attacker move from limited access toward higher control, while the other can interfere with the protection layer a business relies on to stop malware and suspicious behavior.",
+      "p3": "For small businesses, the lesson is practical: make sure Microsoft Defender engine and platform updates are actually applying, not just assumed. Managed devices should be checked for update status, protection health, and tamper protection settings.",
+      "p4": "This also matters for incident response. If an endpoint security tool was behind on updates during an alert, the investigation should include whether the tool itself was targeted, disabled, or bypassed.",
+      "p5": "A good baseline is simple: keep endpoint protection updated automatically, monitor failed or delayed updates, restrict local admin rights, and review security events after any suspicious workstation behavior.",
+      "p6": "Recent exploits are moving quickly, but most businesses can reduce risk by treating security tooling as critical infrastructure that needs visibility, patching, and periodic review."
     }
+  },
+  "blog2": {
+    "slug": "post-2",
+    "type": "Cybersecurity",
+    "name": "Ivanti EPMM Exploitation Shows Why Mobile Management Needs Attention",
+    "sentence": "Ivanti Endpoint Manager Mobile flaws have been actively exploited, highlighting the risk of leaving device management systems exposed and under-monitored.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Mobile device management platforms are powerful because they can control phones, tablets, policies, apps, and access. That same power makes them attractive targets. Recent Ivanti Endpoint Manager Mobile exploitation is a good example of how a management system can become a high-value entry point.",
+      "p2": "One actively exploited Ivanti EPMM vulnerability involved code injection that could allow remote code execution without authentication. For a business, that means an exposed management server could become a direct path into systems that control employee devices and sensitive access.",
+      "p3": "The defensive priority is to know whether the product exists in the environment, whether it is internet-facing, and whether vendor fixes or mitigations have been applied. Inventory matters because many businesses forget about administrative tools after deployment.",
+      "p4": "Device management systems should also be placed behind strong access controls. Admin portals should not be casually exposed, and privileged access should use MFA, named accounts, and logging that someone actually reviews.",
+      "p5": "If a management system has been vulnerable, patching is only step one. Teams should review administrator accounts, recent logins, configuration changes, enrolled devices, and any unusual commands pushed through the platform.",
+      "p6": "The bigger takeaway is that management tools need their own security plan. Anything that can configure or wipe devices deserves careful patching, restricted access, and regular review."
+    }
+  },
+  "blog3": {
+    "slug": "post-3",
+    "type": "Cybersecurity",
+    "name": "Remote Access Software Is Still a Favorite Target",
+    "sentence": "ConnectWise ScreenConnect exploitation shows why remote access tools need tight patching, MFA, and visibility before they become an attacker shortcut.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Remote access tools are useful because they let support teams solve problems without being physically in the office. Attackers like them for the same reason. If a remote access product is vulnerable or poorly configured, it can become a shortcut into the business.",
+      "p2": "CISA recently added a ConnectWise ScreenConnect flaw to its Known Exploited Vulnerabilities catalog after evidence of active exploitation. The vulnerability has been associated with remote code execution risk and abuse in real-world campaigns.",
+      "p3": "Businesses should keep a simple inventory of every remote access tool in use, who owns it, who can log in, and where it is exposed. Unknown remote tools are a common source of unnecessary risk.",
+      "p4": "The strongest basic controls are still effective: patch quickly, require MFA for every technician and administrator, remove unused accounts, restrict access by role, and monitor new sessions or unexpected connections.",
+      "p5": "Remote access logs should not be ignored. A strange login time, unfamiliar source location, newly created admin, or unexpected file transfer can be the early signal that something is wrong.",
+      "p6": "For growing businesses, remote access should be treated like a front door. Keep it locked, watch who uses it, and do not let old tools stay online just because they are convenient."
+    }
+  },
+  "blog4": {
+    "slug": "post-4",
+    "type": "Cybersecurity",
+    "name": "Copy Fail and the Risk of Falling Behind on Linux Updates",
+    "sentence": "The Copy Fail Linux kernel vulnerability is a reminder that servers, appliances, and cloud workloads need a real kernel patch routine.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Linux systems often sit behind websites, cloud workloads, databases, appliances, and internal tools. Because they are reliable, they can also become invisible. The Copy Fail vulnerability is a reminder that reliable systems still need timely kernel updates.",
+      "p2": "Copy Fail, tracked as CVE-2026-31431, is a Linux kernel local privilege escalation issue. It is not the same as a direct internet-facing remote exploit, but it can become dangerous when combined with another foothold, weak account security, or an exposed application.",
+      "p3": "The practical risk is privilege escalation. If an attacker already has limited access to a vulnerable Linux system, a kernel flaw may help them gain root-level control and move from a small problem to a full server compromise.",
+      "p4": "Businesses should confirm which Linux servers and appliances they run, what kernel versions are installed, and how quickly security updates are applied. Cloud images, containers, and vendor-managed systems should not be left out of that review.",
+      "p5": "Patching kernels can require restarts, so many organizations delay them. That delay should be intentional, tracked, and paired with a scheduled maintenance window instead of becoming an indefinite backlog.",
+      "p6": "The best response is boring in the best way: maintain an asset list, watch vendor advisories, apply security updates, reboot when needed, and verify that critical systems came back cleanly."
+    }
+  },
+  "blog5": {
+    "slug": "post-5",
+    "type": "Cybersecurity",
+    "name": "Citrix NetScaler Exploitation: Edge Devices Need Fast Patch Windows",
+    "sentence": "A critical Citrix NetScaler flaw showed active exploitation, making it a strong example of why internet-facing appliances need priority patching.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Citrix NetScaler appliances often sit at the edge of a network, handling remote access, application delivery, and traffic management. That position makes them valuable to defenders and very attractive to attackers.",
+      "p2": "A critical NetScaler vulnerability, tracked as CVE-2026-3055 in recent reporting, was added to CISA's known exploited list after evidence of attacks in the wild. For businesses, the lesson is that exposed edge systems need faster patch windows than ordinary back-office software.",
+      "p3": "Edge devices deserve their own inventory. If a firewall, VPN, gateway, or application delivery controller is exposed to the internet, the business should know the model, version, owner, update status, and logging location.",
+      "p4": "Patching is important, but so is checking for signs of compromise. Review unusual authentication events, new accounts, unexpected configuration changes, suspicious traffic patterns, and administrative access from unfamiliar locations.",
+      "p5": "Remote access should also be protected with MFA, least privilege, and restricted administrative access. Attackers frequently look for management interfaces that are easier to reach than the systems behind them.",
+      "p6": "The practical takeaway is simple: anything exposed to the internet should move to the front of the patching line, especially when CISA confirms active exploitation."
+    }
+  },
+  "blog6": {
+    "slug": "post-6",
+    "type": "Cybersecurity",
+    "name": "cPanel Exploitation: Hosting Control Panels Are High-Value Targets",
+    "sentence": "A critical cPanel and WHM flaw drew attention because hosting control panels can give attackers broad control over websites, email, and server settings.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Hosting control panels are convenient because they bring websites, databases, email, DNS, and server settings into one interface. That convenience also creates risk: if the panel is compromised, the attacker may gain access to many parts of the business web presence at once.",
+      "p2": "Recent reporting on a critical cPanel and WHM vulnerability described active exploitation and a high severity score. Even if a business uses a hosting provider, it should understand who owns patching and how quickly hosting-layer vulnerabilities are handled.",
+      "p3": "Website owners should not assume that control panels are automatically safe because they are familiar. Admin portals should use strong passwords, MFA where available, restricted access, and separate accounts for each user.",
+      "p4": "If a hosting panel is affected by a known exploited vulnerability, review recent logins, new files, suspicious redirects, unexpected email accounts, cron jobs, and unexplained changes to DNS or web roots.",
+      "p5": "Backups matter here too. If a website or hosting account is altered, clean recovery depends on having recent, tested backups that are not stored only inside the compromised environment.",
+      "p6": "For small businesses, the best defense is a combination of managed hosting hygiene, fast patching, MFA, file integrity awareness, and a clear recovery plan."
+    }
+  },
+  "blog7": {
+    "slug": "post-7",
+    "type": "Cybersecurity",
+    "name": "Fortinet, Adobe, and Microsoft KEV Wave: Patch Priority Matters",
+    "sentence": "A CISA KEV wave involving Fortinet, Adobe, and Microsoft shows why vulnerability management should prioritize exploited flaws, not just the longest list.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Most businesses have more updates than time. That is why patch priority matters. Recent CISA KEV additions involving Fortinet, Adobe, and Microsoft are a reminder that exploited vulnerabilities should move ahead of ordinary maintenance updates.",
+      "p2": "A known exploited vulnerability is different from a theoretical risk. It means defenders have evidence that attackers are using the flaw in real-world activity. That changes the timeline for action.",
+      "p3": "The first step is to compare your asset inventory against CISA KEV updates. Firewalls, endpoint software, document readers, operating systems, VPNs, and remote tools should be tracked clearly enough to answer whether a newly listed vulnerability applies.",
+      "p4": "The second step is to define patch expectations. Internet-facing systems and exploited vulnerabilities should have shorter deadlines than routine updates, with a process for emergency change windows when needed.",
+      "p5": "Where patching cannot happen immediately, compensating controls matter. That might include restricting exposure, disabling vulnerable features, increasing logging, or isolating affected systems until a fix can be applied.",
+      "p6": "Vulnerability management does not have to be complicated to be useful. A current inventory, KEV monitoring, clear ownership, and documented patch windows can dramatically reduce risk."
+    }
+  },
+  "blog8": {
+    "slug": "post-8",
+    "type": "Cybersecurity",
+    "name": "SimpleHelp, Samsung MagicINFO, and D-Link: Forgotten Tools Create Risk",
+    "sentence": "Recent KEV activity involving remote support, signage, and network gear shows how overlooked systems can become the easiest path into an organization.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Not every risky system is a laptop or server. Remote support tools, digital signage platforms, routers, and older network devices often stay online for years with very little attention.",
+      "p2": "Recent KEV activity involving products such as SimpleHelp, Samsung MagicINFO, and D-Link devices highlights a common pattern: attackers look for forgotten tools that still have network access, weak visibility, or delayed updates.",
+      "p3": "These systems matter because they often sit in trusted places. A remote support platform may reach endpoints. A signage server may run inside the network. A router may sit between the business and the internet.",
+      "p4": "The defense starts with discovery. Businesses should build an inventory that includes appliances, remote tools, dashboards, signage software, and vendor-managed systems, not just employee computers.",
+      "p5": "Next, review exposure. If a tool does not need to be reachable from the internet, it should not be. If vendor access is needed, it should be named, time-bound, logged, and protected by MFA.",
+      "p6": "The quiet systems deserve attention because attackers are very good at finding what teams forget. Asset tracking is a security control, not just an accounting task."
+    }
+  },
+  "blog9": {
+    "slug": "post-9",
+    "type": "Cybersecurity",
+    "name": "BeyondTrust Exploitation and the Risk of Privileged Remote Support",
+    "sentence": "BeyondTrust exploitation tied to ransomware risk shows why privileged remote support tools need careful access controls and log review.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Privileged remote support tools are powerful by design. They help administrators fix systems, manage sessions, and support users quickly. If abused, that same power can help attackers move faster.",
+      "p2": "CISA warned earlier this year that a BeyondTrust remote code execution flaw had been exploited, with later reporting tying the issue to ransomware concern. For any business using privileged access tools, the message is clear: these systems deserve top-tier protection.",
+      "p3": "Start with who can access the platform. Admin accounts should be named, MFA-protected, reviewed regularly, and limited to the permissions needed for the role.",
+      "p4": "Session logging should be enabled and retained. Look for unusual connection times, unexpected target systems, failed login bursts, new admin creation, and remote sessions that do not match business activity.",
+      "p5": "If a privileged support tool is affected by a known exploited vulnerability, patching should be paired with compromise review. It is not enough to close the door if someone may have already walked through it.",
+      "p6": "Remote support is not the problem. Unmanaged remote support is. With patching, MFA, logging, and regular review, these tools can remain useful without becoming an attacker shortcut."
+    }
+  },
+  "blog10": {
+    "slug": "post-10",
+    "type": "Cybersecurity",
+    "name": "iOS Exploit Kits and Why Mobile Security Belongs in the Plan",
+    "sentence": "Recent attention around iOS exploit activity shows why business phones should be patched, monitored, and included in security planning.",
+    "date": "05/28/2026",
+    "datetime": "2026-05-28",
+    "author": "Queen City Web Solutions",
+    "content": {
+      "p1": "Mobile devices hold email, messages, cloud files, MFA prompts, contacts, and business apps. That makes phones part of the security perimeter, even when they feel personal or separate from the rest of IT.",
+      "p2": "Recent reporting around iOS exploit activity and exploit kits added to CISA's known exploited vulnerability catalog shows that mobile devices can be targeted in serious campaigns. The takeaway for businesses is not panic; it is process.",
+      "p3": "Company-owned phones should have update expectations, passcode requirements, screen lock policies, and a clear path for reporting suspicious behavior. Bring-your-own-device environments need even clearer boundaries.",
+      "p4": "MFA is still important, but mobile compromise can put MFA prompts, email reset links, and business apps at risk. That is why account monitoring and conditional access policies matter alongside device updates.",
+      "p5": "Mobile device management can help, but it should be maintained like any other security system. Enrollment, device status, policy compliance, and lost-device procedures should be reviewed periodically.",
+      "p6": "For small businesses, mobile security starts with basics: patch fast, require strong locks, protect accounts, separate personal and business data where possible, and know what to do when a device is lost or suspected to be compromised."
+    }
+  }
 }
