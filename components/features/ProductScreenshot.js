@@ -1,5 +1,8 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, CheckCircleIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image'
+'use client';
+
+import { CheckCircleIcon } from '@heroicons/react/20/solid';
+import { motion } from 'motion/react';
+import { fadeUp, imageReveal, staggerContainer, revealViewport } from '@components/motion/variants';
 
 const features = [
   {
@@ -20,46 +23,72 @@ const features = [
   },
 ]
 
-export default function ProductScreenshot(props) {
+export default function ProductScreenshot() {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
+    <motion.section
+      // The section starts hidden and animates when it scrolls into view.
+      initial="hidden"
+      whileInView="show"
+      variants={staggerContainer}
+      viewport={revealViewport}
+      className="overflow-hidden bg-white py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           
           {/* Text */}
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-primary">
+              <motion.h2
+                variants={fadeUp}
+                className="text-base font-semibold leading-7 text-primary"
+              >
                 About Us
-              </h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              </motion.h2>
+
+              <motion.p
+                variants={fadeUp}
+                className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
                 Our Story and Mission
-              </p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              </motion.p>
+
+              <motion.p
+                variants={fadeUp}
+                className="mt-6 text-lg leading-8 text-gray-600"
+              >
                 Queen City IT Solutions was founded in Charlotte with a mission to provide top-tier IT services and consultation. We are dedicated to enhancing businesses' IT infrastructure and security nationwide.
-              </p>
+              </motion.p>
+
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
+                  <motion.div
+                    key={feature.name}
+                    // Each feature appears after the text before it.
+                    variants={fadeUp}
+                    className="relative pl-9"
+                  >
                     <dt className="inline font-semibold text-gray-900">
                       <feature.icon className="absolute left-1 top-1 h-5 w-5 text-primary" aria-hidden="true" />
                       {feature.name}
                     </dt>{' '}
                     <dd className="inline">{feature.description}</dd>
-                  </div>
+                  </motion.div>
                 ))}
               </dl>
             </div>
           </div>
 
           {/* Image */}
-          <img
+          <motion.img
+            // The screenshot fades, slides, and scales into place.
+            variants={imageReveal}
             alt=""
             src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
           />
         </div>
       </div>
-    </div>
+    </motion.section>
   )
 }

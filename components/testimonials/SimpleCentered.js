@@ -1,6 +1,18 @@
-export default function Example(props) {
+'use client';
+
+import { motion } from 'motion/react';
+import { fadeUp, revealViewport } from '@components/motion/variants';
+
+export default function Testimonial() {
     return (
-        <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <motion.section
+            // This section animates one time when the testimonial scrolls into view.
+            initial="hidden"
+            whileInView="show"
+            variants={fadeUp}
+            viewport={{ ...revealViewport, amount: 0.35 }}
+            className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8"
+        >
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
             
             {/* Background */}
@@ -9,10 +21,12 @@ export default function Example(props) {
             {/* Text Wrapper */}
             <div className="mx-auto max-w-2xl lg:max-w-4xl">
                 
-                {/* Logo */}
-                {/* <img className="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="" /> */}
-                
-                <figure className="mt-10">
+                <motion.figure
+                    // The quote gets a tiny scale polish so it feels softer than a hard pop.
+                    variants={fadeUp}
+                    whileHover={{ scale: 1.01 }}
+                    className="mt-10"
+                >
 
                     {/* Paragraph */}
                     <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
@@ -25,7 +39,12 @@ export default function Example(props) {
                     <figcaption className="mt-10">
                         
                         {/* Logo */}
-                        <img className="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+                        <motion.img
+                            variants={fadeUp}
+                            className="mx-auto h-10 w-10 rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt=""
+                        />
 
                         {/* Name & Position */}
                         <div className="mt-4 flex items-center justify-center space-x-3 text-base">
@@ -40,14 +59,14 @@ export default function Example(props) {
 
                             {/* Position */}
                             <div className="text-gray-600">
-                                {props.position}
+                                Founder, Local Service Business
                             </div>
 
                         </div>
                     </figcaption>
 
-                </figure>
+                </motion.figure>
             </div>
-        </section>
+        </motion.section>
     )
 }

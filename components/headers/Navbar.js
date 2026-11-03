@@ -1,11 +1,9 @@
 'use client'
 
-import {useState, Fragment} from 'react';
+import { Fragment } from 'react';
+import { Disclosure, Transition } from '@headlessui/react';
 import Link from 'next/link' 
 import Image from "next/image";
-
-//Components
-import SideNav from './SideNav';
 
 //Images/SVG
 import { Bars3Icon } from '@heroicons/react/24/solid'
@@ -26,7 +24,8 @@ import {
     ShieldCheckIcon,
     ClipboardDocumentCheckIcon,
     PresentationChartLineIcon,
-    QuestionMarkCircleIcon
+    QuestionMarkCircleIcon,
+    XMarkIcon
 } from '@heroicons/react/24/outline'
 
 // Main navbar data. Items with "children" automatically become dropdown menus.
@@ -157,14 +156,10 @@ const navItems = [
     },
 ];
 
-function Navbar(props) {
-
-
-    // Controls whether the mobile slide-out menu is open.
-    const [offcanvas, setOffcanvas] = useState(false);
+function Navbar({ logo, variant }) {
 
     // The careers page uses a light background, so this switches text/logo colors.
-    const isLight = props.variant === 'light';
+    const isLight = variant === 'light';
     const navTextClass = isLight
         ? "text-slate-900 transition-colors hover:text-blue-500"
         : "text-white transition-colors hover:text-blue-300";
@@ -176,7 +171,9 @@ function Navbar(props) {
         : "cursor-pointer";
 
     return(
-        <Fragment>
+        <Disclosure as={Fragment}>
+            {({ open, close }) => (
+                <Fragment>
             <nav className={
                 isLight
                     ? "absolute left-0 top-0 z-40 w-full text-slate-900"
@@ -186,15 +183,15 @@ function Navbar(props) {
                     <div className="container mx-auto">
 
                         {/* List Wrapper */}
-                        <div className="flex flex-nowrap items-center justify-between">
+                        <div className="relative flex flex-nowrap items-center justify-between">
 
                             {/* Logo */}
                             <Link href={"/"} >
-                                <Image src={props.logo} height={60} width={80} alt={"logo"} className={logoClass}/>
+                                <Image src={logo} height={60} width={80} alt={"logo"} className={logoClass}/>
                             </Link>
 
                             {/* List */}
-                            <div className="hidden lg:flex items-center gap-x-6">
+                            <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-x-6 lg:flex">
                                 {navItems.map((item) => {
                                     // If an item has children, render it as a dropdown. Otherwise render a normal link.
                                     const hasChildren = Boolean(item.children?.length);
@@ -279,31 +276,19 @@ function Navbar(props) {
                                 })}
                             </div>
 
-                            {/* Contact Us */}
-                            <div className="hidden lg:grid">
-                                {/* <div className='hover:text-yellow-600 transition-colors delay-100'>
-                                    <a href={"tel: " + [props.phoneNumber]}>
-                                        <div className='flex flex-col items-center'>
-                                            <p>{navbar.call.title}</p>
-                                            <p>{props.phoneNumber}</p>
-                                        </div>
-                                        
-                                    </a>
-                                </div> */}
-                                    
-                            </div>
-
                             {/* Off-canvas Menu */}
                             <div className="flex lg:hidden">
-                                <button
-                                    type="button"
-                                    onClick={() => setOffcanvas(true)}
+                                <Disclosure.Button
                                     id="toggle-button"
                                     className={menuButtonClass}
-                                    aria-label="Open navigation menu"
+                                    aria-label={open ? "Close navigation menu" : "Open navigation menu"}
                                 >
-                                    <Bars3Icon className="h-6 w-6" />
-                                </button>
+                                    {open ? (
+                                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                    ) : (
+                                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                                    )}
+                                </Disclosure.Button>
                             </div>
 
                         </div>
@@ -312,14 +297,127 @@ function Navbar(props) {
                 </div>
             </nav>
 
-            <SideNav 
-                items={navItems}
-                showOffcanvas={() => setOffcanvas(false)} 
-                offcanvas={offcanvas} 
-                logo={props.logo}
-            />
+            <Transition
+                as={Fragment}
+                show={open}
+                enter="transition-opacity duration-300 ease-out"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-200 ease-in"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+            >
+                <Disclosure.Panel static className="fixed inset-0 z-50 overflow-y-auto bg-white px-6 py-4 text-slate-950 lg:hidden">
+                    <div className="mx-auto flex min-h-full max-w-7xl flex-col">
+                        <div className="flex items-center justify-between">
+                            <Disclosure.Button as={Link} href="/">
+                                <Image
+                                    src={logo}
+                                    height={60}
+                                    width={100}
+                                    alt="logo"
+                                    className="cursor-pointer brightness-0"
+                                />
+                            </Disclosure.Button>
 
-        </Fragment>
+                            <Disclosure.Button
+                                className="-m-2.5 rounded-md p-2.5 text-slate-700 transition hover:bg-slate-100"
+                                aria-label="Close navigation menu"
+                            >
+                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                            </Disclosure.Button>
+                        </div>
+
+                        <div className="mt-8 flex-1 space-y-2">
+                            <Disclosure.Button
+                                as={Link}
+                                href="/"
+                                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-950 transition hover:bg-slate-50"
+                            >
+                                Home
+                            </Disclosure.Button>
+
+                            {navItems.map((item) => {
+                                const hasChildren = Boolean(item.children?.length);
+
+                                if (!hasChildren) {
+                                    return (
+                                        <Disclosure.Button
+                                            key={item.name}
+                                            as={Link}
+                                            href={item.href}
+                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-950 transition hover:bg-slate-50"
+                                        >
+                                            {item.name}
+                                        </Disclosure.Button>
+                                    );
+                                }
+
+                                return (
+                                    <Disclosure key={item.name} as="div" className="-mx-3">
+                                        {({ open: groupOpen }) => (
+                                            <Fragment>
+                                                <Disclosure.Button className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-base font-semibold leading-7 text-slate-950 transition hover:bg-slate-50">
+                                                    {item.name}
+                                                    <ChevronDownIcon
+                                                        className={`h-5 w-5 flex-none text-slate-500 transition-transform ${groupOpen ? 'rotate-180' : ''}`}
+                                                        aria-hidden="true"
+                                                    />
+                                                </Disclosure.Button>
+
+                                                <Disclosure.Panel className="mt-2 space-y-1 px-3 pb-3">
+                                                    <Link
+                                                        href={item.href}
+                                                        onClick={() => close()}
+                                                        className="block rounded-lg py-2 pl-3 pr-3 text-sm font-semibold leading-6 text-blue-600 transition hover:bg-slate-50"
+                                                    >
+                                                        View {item.name.toLowerCase()}
+                                                    </Link>
+
+                                                    {item.children.map((child) => (
+                                                        <Link
+                                                            key={child.name}
+                                                            href={child.href}
+                                                            onClick={() => close()}
+                                                            className="flex gap-x-3 rounded-lg px-3 py-2 transition hover:bg-slate-50"
+                                                        >
+                                                            <div className="flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-slate-50 text-blue-500 ring-1 ring-slate-900/10">
+                                                                <child.icon className="h-5 w-5" aria-hidden="true" />
+                                                            </div>
+                                                            <div>
+                                                                <p className="text-sm font-semibold leading-6 text-slate-950">
+                                                                    {child.name}
+                                                                </p>
+                                                                <p className="text-sm leading-6 text-slate-600">
+                                                                    {child.description}
+                                                                </p>
+                                                            </div>
+                                                        </Link>
+                                                    ))}
+                                                </Disclosure.Panel>
+                                            </Fragment>
+                                        )}
+                                    </Disclosure>
+                                );
+                            })}
+                        </div>
+
+                        <div className="mt-4 border-t border-slate-900/10 pt-4">
+                            <Disclosure.Button
+                                as={Link}
+                                href="/contact"
+                                className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-950 transition hover:bg-slate-50"
+                            >
+                                Start a project
+                            </Disclosure.Button>
+                        </div>
+                    </div>
+                </Disclosure.Panel>
+            </Transition>
+
+                </Fragment>
+            )}
+        </Disclosure>
     )
 }
 

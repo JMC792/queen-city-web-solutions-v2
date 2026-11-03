@@ -1,9 +1,5 @@
-import Hero2 from "@components/hero/Hero2.js";
 import { Fragment } from "react";
 import blog from "/public/locales/english/blog.json"
-import List from "../../components/blog/List1";
-import about4 from "public/images/portfolio/portfolio1.webp"
-import blogData from "public/data/articles.json"
 import List2 from "@components/blog/List2";
 import Header from "@components/headers/Header1";
 

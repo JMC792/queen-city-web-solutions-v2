@@ -8,7 +8,6 @@ import FAQ from "@components/FAQ/FAQ1";
 //Locales
 import layout from "public/locales/english/layout.json";
 import contact from "public/locales/english/contact.json";
-import Header1 from "@components/headers/Header1";
 
 export const metadata = {
   title: "Contact Us",
