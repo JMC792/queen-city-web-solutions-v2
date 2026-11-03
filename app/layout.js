@@ -50,15 +50,6 @@ export default function RootLayout({children}){
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Navbar
-          link2 = {layout.sitemap.about} //About
-          link3 = {layout.sitemap.link3} //Portfolio
-          link4 = {layout.sitemap.contact} //Contact
-          link5 = {layout.sitemap.service} //Service
-          link6 = {layout.sitemap.blog} //Blog
-          phoneNumber = {layout.number}
-          logo = {logo}
-        /> */}
           {children}
         <Footer/>
       </body>

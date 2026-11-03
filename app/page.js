@@ -1,58 +1,21 @@
-import {Fragment} from "react";
-//Components
 import Hero from "@components/hero/Hero";
-import SimpleCentered from "@components/testimonials/SimpleCentered";
-//Components
+import Testimonial from "@components/testimonials/SimpleCentered";
 import OffsetList from "@components/features/OffsetList.js";
-import Stat from "@components/stats/Stat.js";
-import CTA from "@components/CTA/CTA1.js";
-import FAQ1 from "@components/FAQ/FAQ1.js";
-import Bento from "@components/bento/Bento1.js";
-
-//Locales
-import service from "public/locales/english/services.json";
-
-//Locales/Data
-import language from "/public/locales/english/homepage.json";
-
-// Icons
-
-// Images
-import image4 from "/public/images/homepage/photo1.jpeg";
+import LogoCloud from "@components/stats/Stat.js";
+import TeamCTA from "@components/CTA/CTA1.js";
+import FAQ from "@components/FAQ/FAQ1.js";
 import ProductScreenshot from "@components/features/ProductScreenshot";
 
-export default function Page() {
+export default function HomePage() {
   return (
-        <Fragment>
-            <Hero 
-              subtitle={language.index.hero.subtitle} 
-              title={language.index.hero.title} 
-              button={language.index.hero.button.title} 
-              buttonLink={language.index.hero.button.link} 
-            />
-            <Stat/>
-            <OffsetList
-              heading={service.section1.heading}
-              title={service.section1.title}
-              paragraph={service.section1.paragraph}
-            />
-
-            {/* About Us */}
-            <ProductScreenshot
-              heading={language.index.about.heading} 
-              title={language.index.about.title} 
-              paragraph={language.index.about.paragraph.one}
-              image={image4}
-            />
-            {/* <Bento/> */}
-            {/* Testimonial */}
-            <SimpleCentered
-              name={language.index.testimonials.name}
-              paragraph={language.index.testimonials.paragraph}
-              position={language.index.testimonials.position}
-            />
-            <CTA/>
-            <FAQ1/>
-        </Fragment>
+    <main>
+      <Hero />
+      <OffsetList />
+      <LogoCloud />
+      <ProductScreenshot />
+      <Testimonial />
+      <TeamCTA />
+      <FAQ />
+    </main>
   );
 }

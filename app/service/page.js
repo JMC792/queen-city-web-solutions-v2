@@ -4,11 +4,6 @@ import Link from "next/link";
 import Header from "@components/headers/Header1.js";
 import OffsetList from "@components/features/OffsetList.js";
 
-//Locales
-import service from "public/locales/english/services.json";
-
-//images
-
 const serviceLinks = [
   {
     title: "Managed IT Services",
@@ -68,11 +63,7 @@ export default function Page() {
               title = {"Our Services"}
               text = {"Managed IT, cybersecurity, IAM, cloud, network support, backup planning, help desk, and web design services for businesses that need dependable technology."}
             />
-            <OffsetList
-              heading={service.section1.heading}
-              title={service.section1.title}
-              paragraph={service.section1.paragraph}
-            />
+            <OffsetList />
             <section className="bg-slate-50 px-6 py-20 lg:px-8">
               <div className="mx-auto max-w-7xl">
                 <div className="max-w-3xl">
